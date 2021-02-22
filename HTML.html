@@ -4,9 +4,7 @@
 <head>
     <title>Messtool</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="CSS.css">
     <link href="/fontawesome/css/all.css" rel="stylesheet">
@@ -15,13 +13,25 @@
 
 <body>
     <div>
-        <button onclick="buttonssolved()" class="fas fa-undo-alt htmlbuttons"> B</button>
-        <button onclick="buttonssolved()" class="fas fa-trash-alt htmlbuttons""> Reset</button>
-        <button onclick="buttonssolved()" class="fas fa-redo-alt htmlbuttons""> B</button>
+        <div id="Bcounterclockwise">
+            <button onclick="buttonssolved()" class="fas fa-undo-alt htmlbuttons"> B</button>
+        </div>
+        <div id="reset">
+            <button onclick="buttonssolved()" class="fas fa-trash-alt htmlbuttons"> Reset</button>
+        </div>
+        <div id="Bclockwise">
+            <button onclick="buttonssolved()" class="fas fa-redo-alt htmlbuttons"> B</button>
+        </div>
+        
+        
     </div>
     <div>
-        <button onclick="buttonssolved()" class="fas fa-undo-alt htmlbuttons""> W</button>
-        <button onclick="buttonssolved()" class="fas fa-redo-alt htmlbuttons""> W</button>
+        <div id="Wcounterclockwise">
+            <button onclick="buttonssolved()" class="fas fa-undo-alt htmlbuttons"> W</button>
+        </div>
+        <div id="Wclockwise">
+            <button onclick="buttonssolved()" class="fas fa-redo-alt htmlbuttons" > W</button>
+        </div>
     </div>
 </body>
 

@@ -6,7 +6,7 @@ body {
 }
 
 .htmlbuttons {
-    background-color: #4CAF50;
+    background-color: #688db8;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -14,11 +14,47 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
-    margin-top: 10px;
-    margin-left: 10px;
+    width: 100%;
 }
+
 .htmlbuttons:hover {
     color: white;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
     background: rgb(255, 55, 98);
-  }
+}
+
+#Bcounterclockwise{
+    text-align: center;
+    margin-top: 1%;
+    margin-left: 30%;
+    float:left;
+}
+
+#Bclockwise{
+    text-align: center;
+    margin-top: 1%;
+    margin-right: 30%;
+    float:right;
+}
+
+#Wcounterclockwise{
+    text-align: center;
+    margin-top: 1%;
+    margin-right: 30%;
+    float:right;
+}
+
+#Wclockwise{
+    text-align: center;
+    margin-top: 1%;
+    margin-left: 30%;
+    float:left;
+}
+
+#reset{
+    position: absolute;
+    top: 6%;
+    left: 50%;
+    transform: translate(-50%,-50%);   
+}
+
