@@ -8,29 +8,27 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="CSS.css">
     <link rel="stylesheet" type="text/css" href="all.css">
-    <script src="Javascript.js"></script>
 </head>
 
 <body>
+    <script src="Javascript.js"></script>
     <div>
         <div id="Bcounterclockwise">
-            <button onclick="buttonssolved()" class="fas fa-undo-alt htmlbuttons"> B</button>
+            <button onclick="Bcounterclockwise()" class="fas fa-undo-alt htmlbuttons"> B</button>
         </div>
         <div id="reset">
-            <button onclick="buttonssolved()" class="fas fa-trash-alt htmlbuttons"> Reset</button>
+            <button onclick="reset()" class="fas fa-trash-alt htmlbuttons"> Reset</button>
         </div>
         <div id="Bclockwise">
-            <button onclick="buttonssolved()" class="fas fa-redo-alt htmlbuttons"> B</button>
-        </div>
-        
-        
+            <button onclick="Bclockwise()" class="fas fa-redo-alt htmlbuttons"> B</button>
+        </div>       
     </div>
     <div>
         <div id="Wcounterclockwise">
-            <button onclick="buttonssolved()" class="fas fa-undo-alt htmlbuttons"> W</button>
+            <button onclick="Wcounterclockwise()" class="fas fa-undo-alt htmlbuttons"> W</button>
         </div>
         <div id="Wclockwise">
-            <button onclick="buttonssolved()" class="fas fa-redo-alt htmlbuttons" > W</button>
+            <button onclick="Wclockwise()" class="fas fa-redo-alt htmlbuttons" > W</button>
         </div>
     </div>
 
@@ -42,7 +40,10 @@
             <div id="pointIn">
             </div>
         </div>
-
+        <div id="pointOut1">
+            <div id="pointIn1">
+            </div>
+        </div>
     <div id="speedInputFieldDIV">
         <h5 id="speedInputFieldText">Geschwindigkeit (in steps):</h5>
         <input type="text" id="speedInputField" value="10">
@@ -50,6 +51,15 @@
     <div id="durationInputFieldDIV">
         <h5 id="durationInputFieldText">Dauer (in ms):</h5>
         <input type="text" id="speedInputField" value="5000">
+    </div>
+    <div id="outpositionDIV">
+        <h5 id="outposition">Sektor OUT:</h5>
+    </div>
+    <div id="inpositionDIV">
+        <h5 id="inposition">Sektor IN:</h5>
+    </div>
+    <div id="WDIV">
+        <h1 id="inposition">W</h1>
     </div>
 </body>
 

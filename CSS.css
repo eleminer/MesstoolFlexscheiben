@@ -93,7 +93,7 @@ body {
     top: 50%;
     width: 300px;
     height: 300px;
-    transform: translate(-50%,-50%) rotate(180deg);
+    transform: translate(-50%,-50%) rotate(90deg);
 }
 #pointIn{
     background-color: #a6ff00;
@@ -112,4 +112,44 @@ body {
 }
 #durationInputFieldText{
     color: white;
+}
+#pointOut1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 300px;
+    height: 300px;
+    transform: translate(-50%,-50%) rotate(90deg);
+}
+#pointIn1{
+    background-color: #0a23ff;
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    transform: translate(-50%,-50%);
+}
+#outpositionDIV{
+    position: absolute;
+    top: 90%;
+    left: 80%;
+}
+#outposition{
+    color: white;
+}
+#inpositionDIV{
+    position: absolute;
+    top: 80%;
+    left: 80%;
+}
+#inposition{
+    color: white;
+}
+#WDIV {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
