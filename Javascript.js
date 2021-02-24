@@ -11,13 +11,11 @@ var resetvar = 0;
 var positionOUT = 90;
 var positionIN = 90;
 var speed = 1;
+var speed = 1;
 var duration;
 var durationIN = 1;
 var durationOUT = 1;
-/*
-W=document.getElementById("pointOut1").style.transform = "translate(-50%,-50%) rotate(0deg)";
-B=document.getElementById("pointOut").style.transform = "translate(-50%,-50%) rotate(0deg)";
-*/
+
 myFunction();
 
 function myFunction() {
@@ -29,7 +27,7 @@ function myFunction2() {
 }
 
 function myFunction3() {
-    myVar3 = setInterval(alertFunc3, (speed * 1000));
+    myVar3 = setInterval(alertFunc3, (speed1 * 1000));
 }
 
 function alertFunc2() {
@@ -55,12 +53,12 @@ function alertFunc3() {
     if (wclockwise == 1) {
         document.getElementById("pointOut1").style.transform = "translate(-50%,-50%) rotate(" + positionIN + "deg)";
         positionIN = positionIN + (360 / 111);
-        durationIN = durationIN - speed;
+        durationIN = durationIN - speed1;
     }
     if (wcounterclockwise == 1) {
         document.getElementById("pointOut1").style.transform = "translate(-50%,-50%) rotate(" + positionIN + "deg)";
         positionIN = positionIN - (360 / 111);
-        durationIN = durationIN - speed;
+        durationIN = durationIN - speed1;
     }
     if (durationIN <= 0) {
         wclockwise = 0;
@@ -71,21 +69,8 @@ function alertFunc3() {
 }
 
 function alertFunc() {
-    var outsektormath = ((positionOUT % 360) / (360 / 111));
-    if (outsektormath >= ((90 % 360) / (360 / 111))) {
-        outsektormath = outsektormath - ((90 % 360) / (360 / 111));
-    } else {
-        outsektormath = Math.abs(outsektormath) + 3 * (((90 % 360) / (360 / 111)));
-    }
-    var insektormath = ((positionIN % 360) / (360 / 111));
-    if (insektormath >= ((90 % 360) / (360 / 111))) {
-        insektormath = insektormath - ((90 % 360) / (360 / 111));
-    } else {
-        insektormath = Math.abs(insektormath) + 3 * (((90 % 360) / (360 / 111)));
-    }
-
-    document.getElementById("insertoutsektor").innerHTML = Math.round(outsektormath + 0.5);
-    document.getElementById("insertinsektor").innerHTML = Math.round(insektormath + 0.5);;
+    document.getElementById("insertoutsektor").innerHTML = positionIN;
+    document.getElementById("insertinsektor").innerHTML = positionOUT;
 
     if (resetvar == 1) {
         positionOUT = 90;
@@ -104,25 +89,30 @@ function alertFunc() {
 function testinputSpeed() {
     if (speed < 0.01 || speed > 10000) {
         alert('Geschwindigkeit außerhalb der Animationsgeschwindigkeit!\nBitte einen Wert größer/gleich 0.01 eingeben und niedriger als 10000!');
+        reset();
     }
 }
 
 function Bcounterclockwise() {
-    speed = document.getElementById("speedInputField").value;
-    duration = document.getElementById("durationInputField").value;
-    durationOUT = duration;
-    testinputSpeed();
-    bcounterclockwise = 1;
-    myFunction2();
+    if (bcounterclockwise == 0 && bclockwise == 0) {
+        speed = document.getElementById("speedInputField").value;
+        duration = document.getElementById("durationInputField").value;
+        durationOUT = duration;
+        testinputSpeed();
+        bcounterclockwise = 1;
+        myFunction2();
+    }
 }
 
 function Bclockwise() {
-    speed = document.getElementById("speedInputField").value;
-    duration = document.getElementById("durationInputField").value;
-    durationOUT = duration;
-    testinputSpeed();
-    bclockwise = 1;
-    myFunction2();
+    if (bclockwise == 0 && bcounterclockwise == 0) {
+        speed = document.getElementById("speedInputField").value;
+        duration = document.getElementById("durationInputField").value;
+        durationOUT = duration;
+        testinputSpeed();
+        bclockwise = 1;
+        myFunction2();
+    }
 }
 
 function reset() {
@@ -132,19 +122,25 @@ function reset() {
 }
 
 function Wcounterclockwise() {
-    speed = document.getElementById("speedInputField").value;
-    duration = document.getElementById("durationInputField").value;
-    durationIN = duration;
-    testinputSpeed();
-    wcounterclockwise = 1;
-    myFunction3();
+    if (wcounterclockwise == 0 && wclockwise == 0) {
+        speed1 = document.getElementById("speedInputField").value;
+        duration = document.getElementById("durationInputField").value;
+        durationIN = duration;
+        testinputSpeed();
+        wcounterclockwise = 1;
+        myFunction3();
+
+    }
 }
 
 function Wclockwise() {
-    speed = document.getElementById("speedInputField").value;
-    duration = document.getElementById("durationInputField").value;
-    durationIN = duration;
-    testinputSpeed();
-    wclockwise = 1;
-    myFunction3();
+    if (wclockwise == 0 && wcounterclockwise == 0) {
+        speed1 = document.getElementById("speedInputField").value;
+        duration = document.getElementById("durationInputField").value;
+        durationIN = duration;
+        testinputSpeed();
+        wclockwise = 1;
+        myFunction3();
+    }
+
 }
