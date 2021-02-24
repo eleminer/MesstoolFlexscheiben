@@ -1,3 +1,13 @@
+var myVar;
+myFunction();
+function myFunction() {
+  myVar = setInterval(alertFunc, 10);
+}
+
+function alertFunc() {
+  document.getElementById("insertoutsektor").innerHTML = 20;
+  document.getElementById("insertinsektor").innerHTML = 40;
+}
 
 function Bcounterclockwise() 
 {
