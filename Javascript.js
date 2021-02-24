@@ -8,7 +8,7 @@ var bcounterclockwise = 0;
 var wclockwise = 0;
 var wcounterclockwise = 0;
 var resetvar = 0;
-var positionOUT = 90;
+var positionOUT = 90+360;
 var positionIN = 90;
 var speed = 1;
 var speed = 1;
@@ -31,6 +31,10 @@ function myFunction3() {
 }
 
 function alertFunc2() {
+    if(360>=positionOUT)
+    {
+        positionOUT=positionOUT+360;
+    }
     if (bclockwise == 1) {
         document.getElementById("pointOut").style.transform = "translate(-50%,-50%) rotate(" + positionOUT + "deg)";
         positionOUT = positionOUT + (360 / 111);
@@ -50,6 +54,10 @@ function alertFunc2() {
 }
 
 function alertFunc3() {
+    if(360>=positionIN)
+    {
+        positionIN=positionIN+360;
+    }
     if (wclockwise == 1) {
         document.getElementById("pointOut1").style.transform = "translate(-50%,-50%) rotate(" + positionIN + "deg)";
         positionIN = positionIN + (360 / 111);
@@ -69,8 +77,8 @@ function alertFunc3() {
 }
 
 function alertFunc() {
-    document.getElementById("insertoutsektor").innerHTML = positionIN;
-    document.getElementById("insertinsektor").innerHTML = positionOUT;
+    document.getElementById("insertoutsektor").innerHTML =Math.round((((positionOUT-90)%360)/(360/111))+1);
+    document.getElementById("insertinsektor").innerHTML = Math.round((((positionIN-90)%360)/(360/111))+1);
 
     if (resetvar == 1) {
         positionOUT = 90;
