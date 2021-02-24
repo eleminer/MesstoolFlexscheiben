@@ -23,42 +23,42 @@ body {
     background: rgb(255, 55, 98);
 }
 
-#Bcounterclockwise{
+#Bcounterclockwise {
     text-align: center;
     margin-top: 1%;
     margin-left: 30%;
-    float:left;
+    float: left;
 }
 
-#Bclockwise{
+#Bclockwise {
     text-align: center;
     margin-top: 1%;
     margin-right: 30%;
-    float:right;
+    float: right;
 }
 
-#Wcounterclockwise{
+#Wcounterclockwise {
     text-align: center;
     margin-top: 1%;
     margin-right: 30%;
-    float:right;
+    float: right;
 }
 
-#Wclockwise{
+#Wclockwise {
     text-align: center;
     margin-top: 1%;
     margin-left: 30%;
-    float:left;
+    float: left;
 }
 
-#reset{
+#reset {
     position: absolute;
     top: 6%;
     left: 50%;
-    transform: translate(-50%,-50%);   
+    transform: translate(-50%, -50%);
 }
 
-#circleOut{
+#circleOut {
     background-color: #688db8;
     position: absolute;
     left: 50%;
@@ -66,9 +66,10 @@ body {
     width: 400px;
     height: 400px;
     border-radius: 200px;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
-#circleInner{
+
+#circleInner {
     background-color: #66abfa;
     position: absolute;
     left: 50%;
@@ -76,26 +77,29 @@ body {
     width: 300px;
     height: 300px;
     border-radius: 150px;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
-#speedInputFieldDIV{
+
+#speedInputFieldDIV {
     position: absolute;
     top: 80%;
     left: 20%;
 }
-#speedInputFieldText{
+
+#speedInputFieldText {
     color: white;
 }
 
-#pointOut{
+#pointOut {
     position: absolute;
     left: 50%;
     top: 50%;
     width: 300px;
     height: 300px;
-    transform: translate(-50%,-50%) rotate(90deg);
+    transform: translate(-50%, -50%) rotate(90deg);
 }
-#pointIn{
+
+#pointIn {
     background-color: #a6ff00;
     position: absolute;
     left: -8%;
@@ -103,25 +107,29 @@ body {
     width: 20px;
     height: 20px;
     border-radius: 10px;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
-#durationInputFieldDIV{
+
+#durationInputFieldDIV {
     position: absolute;
     top: 90%;
     left: 20%;
 }
-#durationInputFieldText{
+
+#durationInputFieldText {
     color: white;
 }
-#pointOut1{
+
+#pointOut1 {
     position: absolute;
     left: 50%;
     top: 50%;
     width: 300px;
     height: 300px;
-    transform: translate(-50%,-50%) rotate(90deg);
+    transform: translate(-50%, -50%) rotate(90deg);
 }
-#pointIn1{
+
+#pointIn1 {
     background-color: #0a23ff;
     position: absolute;
     left: 5%;
@@ -129,31 +137,36 @@ body {
     width: 20px;
     height: 20px;
     border-radius: 10px;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
-#outpositionDIV{
+
+#outpositionDIV {
     position: absolute;
     top: 90%;
     left: 80%;
 }
-#outposition{
+
+#outposition {
     color: white;
 }
-#inpositionDIV{
+
+#inpositionDIV {
     position: absolute;
     top: 80%;
     left: 80%;
 }
-#inposition{
+
+#inposition {
     color: white;
 }
+
 #WDIV {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
+
 .insertscounter {
     color: white;
 }
-
