@@ -35,13 +35,13 @@ function alertFunc2() {
         positionOUT = positionOUT + 360;
     }
     if (bclockwise == 1) {
-        document.getElementById("pointOut").style.transform = "translate(-50%,-50%) rotate(" + positionOUT + "deg)";
         positionOUT = positionOUT + (360 / 111);
+        document.getElementById("pointOut").style.transform = "translate(-50%,-50%) rotate(" + positionOUT + "deg)";
         durationOUT = durationOUT - speed;
     }
     if (bcounterclockwise == 1) {
-        document.getElementById("pointOut").style.transform = "translate(-50%,-50%) rotate(" + positionOUT + "deg)";
         positionOUT = positionOUT - (360 / 111);
+        document.getElementById("pointOut").style.transform = "translate(-50%,-50%) rotate(" + positionOUT + "deg)";
         durationOUT = durationOUT - speed;
     }
     if (durationOUT <= 0) {
@@ -57,13 +57,13 @@ function alertFunc3() {
         positionIN = positionIN + 360;
     }
     if (wclockwise == 1) {
-        document.getElementById("pointOut1").style.transform = "translate(-50%,-50%) rotate(" + positionIN + "deg)";
         positionIN = positionIN + (360 / 111);
+        document.getElementById("pointOut1").style.transform = "translate(-50%,-50%) rotate(" + positionIN + "deg)";
         durationIN = durationIN - speed1;
     }
     if (wcounterclockwise == 1) {
-        document.getElementById("pointOut1").style.transform = "translate(-50%,-50%) rotate(" + positionIN + "deg)";
         positionIN = positionIN - (360 / 111);
+        document.getElementById("pointOut1").style.transform = "translate(-50%,-50%) rotate(" + positionIN + "deg)";
         durationIN = durationIN - speed1;
     }
     if (durationIN <= 0) {
@@ -78,12 +78,12 @@ function alertFunc() {
     var incircle;
     var outcircle;
     if (112 == Math.round((((positionOUT - 90) % 360) / (360 / 111)) + 1)) {
-        outcircle = Math.round((((positionOUT - 90) % 360) / (360 / 111)));
+        outcircle = Math.round((((positionOUT - 90) % 360) / (360 / 111)) - 110);
     } else {
         outcircle = Math.round((((positionOUT - 90) % 360) / (360 / 111)) + 1);
     }
     if (112 == Math.round((((positionIN - 90) % 360) / (360 / 111)) + 1)) {
-        incircle = Math.round((((positionIN - 90) % 360) / (360 / 111)));
+        incircle = Math.round((((positionIN - 90) % 360) / (360 / 111)) - 110);
     } else {
         incircle = Math.round((((positionIN - 90) % 360) / (360 / 111)) + 1);
     }
