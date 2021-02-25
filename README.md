@@ -1,1 +1,2 @@
 # MesstoolFlexscheiben
+![](animation.gif)
