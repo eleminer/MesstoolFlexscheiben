@@ -1,7 +1,7 @@
 body {
     padding: 0;
     margin: 0;
-    background: #3a3a3a;
+    background: #585858;
     overflow-x: hidden;
 }
 
@@ -142,7 +142,7 @@ body {
 
 #outpositionDIV {
     position: absolute;
-    top: 90%;
+    top: 80%;
     left: 80%;
 }
 
@@ -152,7 +152,7 @@ body {
 
 #inpositionDIV {
     position: absolute;
-    top: 80%;
+    top: 60%;
     left: 80%;
 }
 
@@ -168,5 +168,51 @@ body {
 }
 
 .insertscounter {
-    color: white;
+    color: #0a23ff;
+}
+
+.insertscounterpredict {
+    color: rgb(255, 217, 0);
+}
+
+
+
+#yellowIN {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 300px;
+    height: 300px;
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+#yIN {
+    background-color: rgb(255, 217, 0);
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    transform: translate(-50%, -50%);
+}
+
+#yellowOUT {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 300px;
+    height: 300px;
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+#yOUT {
+    background-color: rgb(255, 217, 0);
+    position: absolute;
+    left: -8%;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    transform: translate(-50%, -50%);
 }

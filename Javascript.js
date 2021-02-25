@@ -17,6 +17,8 @@ var durationIN = 1;
 var durationOUT = 1;
 var divider2 = 100;
 var divider3 = 100;
+var outPredict=1;
+var inPredict=1;
 
 myFunction();
 
@@ -92,6 +94,9 @@ function alertFunc() {
 
     document.getElementById("insertoutsektor").innerHTML = outcircle;
     document.getElementById("insertinsektor").innerHTML = incircle;
+
+    document.getElementById("insertoutsektorpredict").innerHTML = outPredict;
+    document.getElementById("insertinsektorpredict").innerHTML = inPredict;
 
     if (resetvar == 1) {
         positionOUT = 90;
