@@ -15,6 +15,8 @@ var speed = 1;
 var duration;
 var durationIN = 1;
 var durationOUT = 1;
+var divider2 = 100;
+var divider3 = 100;
 
 myFunction();
 
@@ -23,11 +25,11 @@ function myFunction() {
 }
 
 function myFunction2() {
-    myVar2 = setInterval(alertFunc2, (speed * 1000));
+    myVar2 = setInterval(alertFunc2, ((speed * 1000) / divider2));
 }
 
 function myFunction3() {
-    myVar3 = setInterval(alertFunc3, (speed1 * 1000));
+    myVar3 = setInterval(alertFunc3, ((speed1 * 1000) / divider3));
 }
 
 function alertFunc2() {
@@ -35,14 +37,14 @@ function alertFunc2() {
         positionOUT = positionOUT + 360;
     }
     if (bclockwise == 1) {
-        positionOUT = positionOUT + (360 / 111);
+        positionOUT = positionOUT + ((360 / 111) / divider2);
         document.getElementById("pointOut").style.transform = "translate(-50%,-50%) rotate(" + positionOUT + "deg)";
-        durationOUT = durationOUT - speed;
+        durationOUT = durationOUT - speed / divider2;
     }
     if (bcounterclockwise == 1) {
-        positionOUT = positionOUT - (360 / 111);
+        positionOUT = positionOUT - ((360 / 111) / divider2);
         document.getElementById("pointOut").style.transform = "translate(-50%,-50%) rotate(" + positionOUT + "deg)";
-        durationOUT = durationOUT - speed;
+        durationOUT = durationOUT - speed / divider2;
     }
     if (durationOUT <= 0) {
         bclockwise = 0;
@@ -57,14 +59,14 @@ function alertFunc3() {
         positionIN = positionIN + 360;
     }
     if (wclockwise == 1) {
-        positionIN = positionIN + (360 / 111);
+        positionIN = positionIN + ((360 / 111) / divider3);
         document.getElementById("pointOut1").style.transform = "translate(-50%,-50%) rotate(" + positionIN + "deg)";
-        durationIN = durationIN - speed1;
+        durationIN = durationIN - speed1 / divider3;
     }
     if (wcounterclockwise == 1) {
-        positionIN = positionIN - (360 / 111);
+        positionIN = positionIN - ((360 / 111) / divider3);
         document.getElementById("pointOut1").style.transform = "translate(-50%,-50%) rotate(" + positionIN + "deg)";
-        durationIN = durationIN - speed1;
+        durationIN = durationIN - speed1 / divider3;
     }
     if (durationIN <= 0) {
         wclockwise = 0;
@@ -106,8 +108,8 @@ function alertFunc() {
 }
 
 function testinputSpeed() {
-    if (speed < 0.01 || speed > 10000) {
-        alert('Geschwindigkeit außerhalb der Animationsgeschwindigkeit!\nBitte einen Wert größer/gleich 0.01 eingeben und niedriger als 10000!');
+    if (speed < 0.05 || speed > 10000) {
+        alert('Geschwindigkeit außerhalb der Animationsgeschwindigkeit!\nBitte einen Wert größer/gleich 0.05 eingeben und niedriger als 10000!');
         reset();
     }
 }
@@ -117,6 +119,7 @@ function Bcounterclockwise() {
         speed = document.getElementById("speedInputField").value;
         duration = document.getElementById("durationInputField").value;
         durationOUT = duration;
+        divider2 = (speed * 1000) / 10;
         testinputSpeed();
         bcounterclockwise = 1;
         myFunction2();
@@ -128,6 +131,7 @@ function Bclockwise() {
         speed = document.getElementById("speedInputField").value;
         duration = document.getElementById("durationInputField").value;
         durationOUT = duration;
+        divider2 = (speed * 1000) / 10;
         testinputSpeed();
         bclockwise = 1;
         myFunction2();
@@ -145,6 +149,7 @@ function Wcounterclockwise() {
         speed1 = document.getElementById("speedInputField").value;
         duration = document.getElementById("durationInputField").value;
         durationIN = duration;
+        divider3 = (speed1 * 1000) / 10;
         testinputSpeed();
         wcounterclockwise = 1;
         myFunction3();
@@ -156,6 +161,7 @@ function Wclockwise() {
         speed1 = document.getElementById("speedInputField").value;
         duration = document.getElementById("durationInputField").value;
         durationIN = duration;
+        divider3 = (speed1 * 1000) / 10;
         testinputSpeed();
         wclockwise = 1;
         myFunction3();
