@@ -75,8 +75,21 @@ function alertFunc3() {
 }
 
 function alertFunc() {
-    document.getElementById("insertoutsektor").innerHTML = Math.round((((positionOUT - 90) % 360) / (360 / 111)) + 1);
-    document.getElementById("insertinsektor").innerHTML = Math.round((((positionIN - 90) % 360) / (360 / 111)) + 1);
+    var incircle;
+    var outcircle;
+    if (112 == Math.round((((positionOUT - 90) % 360) / (360 / 111)) + 1)) {
+        outcircle = Math.round((((positionOUT - 90) % 360) / (360 / 111)));
+    } else {
+        outcircle = Math.round((((positionOUT - 90) % 360) / (360 / 111)) + 1);
+    }
+    if (112 == Math.round((((positionIN - 90) % 360) / (360 / 111)) + 1)) {
+        incircle = Math.round((((positionIN - 90) % 360) / (360 / 111)));
+    } else {
+        incircle = Math.round((((positionIN - 90) % 360) / (360 / 111)) + 1);
+    }
+
+    document.getElementById("insertoutsektor").innerHTML = outcircle;
+    document.getElementById("insertinsektor").innerHTML = incircle;
 
     if (resetvar == 1) {
         positionOUT = 90;
@@ -135,7 +148,6 @@ function Wcounterclockwise() {
         testinputSpeed();
         wcounterclockwise = 1;
         myFunction3();
-
     }
 }
 
@@ -148,5 +160,4 @@ function Wclockwise() {
         wclockwise = 1;
         myFunction3();
     }
-
 }
