@@ -19,6 +19,10 @@ var divider2 = 100;
 var divider3 = 100;
 var outPredict = 90 + 360;
 var inPredict = 90 + 360;
+var angleincorrection=90;
+var angleoutcorrection=90;
+var currentCorrectionPositionOUT=90;
+var currentCorrectionPositionIN=90;
 
 myFunction();
 
@@ -94,6 +98,10 @@ function alertFunc() {
 
     document.getElementById("insertoutsektor").innerHTML = outcircle;
     document.getElementById("insertinsektor").innerHTML = incircle;
+
+    document.getElementById("numberOUTCorrection").innerHTML = currentCorrectionPositionOUT;
+    document.getElementById("numberINCorrection").innerHTML = currentCorrectionPositionIN;
+
 
 
     while (360 >= outPredict) {
@@ -213,4 +221,16 @@ function Wclockwise() {
         wclockwise = 1;
         myFunction3();
     }
+}
+
+
+function resetcorrectionB()
+{
+    document.getElementById("correctionOUT").style.transform = "translate(-50%,-50%) rotate(" + angleoutcorrection + "deg)";
+    new Propeller(document.getElementById('correctionOUT'), {inertia: 0, speed: 0, angle: 90});
+}
+function resetcorrectionW()
+{
+    document.getElementById("correctionIN").style.transform = "translate(-50%,-50%) rotate(" + angleincorrection + "deg)";
+    new Propeller(document.getElementById('correctionIN'), {inertia: 0, speed: 0, angle: 90});
 }

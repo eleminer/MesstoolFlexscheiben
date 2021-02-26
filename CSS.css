@@ -175,6 +175,9 @@ body {
 .insertscounterpredict {
     color: rgb(255, 217, 0);
 }
+.insertcountercorrection {
+    color: rgb(31, 255, 1);
+}
 
 
 
@@ -301,7 +304,7 @@ body {
 }
 
 #cIN {
-    background-color: rgb(47, 189, 28);
+    background-color: rgb(31, 255, 1);
     position: absolute;
     left: 8%;
     top: 50%;

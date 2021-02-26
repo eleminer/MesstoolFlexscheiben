@@ -59,7 +59,6 @@
         this.addListeners();
         this.update();
     };
-
     Propeller.createMany = function (nodes, options) {
         var result = [];
         for (var i = 0; i < nodes.length; i++) {
