@@ -144,7 +144,7 @@ body {
 #outpositionDIV {
     position: absolute;
     top: 80%;
-    left: 80%;
+    left: 75%;
 }
 
 #outposition {
@@ -154,7 +154,7 @@ body {
 #inpositionDIV {
     position: absolute;
     top: 60%;
-    left: 80%;
+    left: 75%;
 }
 
 #inposition {
