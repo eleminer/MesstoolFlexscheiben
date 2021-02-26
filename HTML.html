@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="CSS.css">
     <link rel="stylesheet" type="text/css" href="all.css">
+
 </head>
 
 <body>
+    <script src="propeller.js"></script>
     <script src="Javascript.js"></script>
     <div>
         <div id="Bcounterclockwise">
@@ -86,10 +88,14 @@
         </div>
     </div>
 
+    <div id="propellerOUT">
     <div id="correctionOUT">
         <div id="cOUT">
         </div>
     </div>
+</div>
+
+
     <div id="correctionIN">
         <div id="cIN">
         </div>
@@ -120,6 +126,9 @@
     <div id="WDIV">
         <h1 id="inposition">W</h1>
     </div>
+    <script>
+        new Propeller(document.getElementById('correctionOUT'), {inertia: 0, speed: 0});
+    </script>
 </body>
 
 </html>
