@@ -82,7 +82,7 @@ body {
 
 #speedInputFieldDIV {
     position: absolute;
-    top: 80%;
+    top: 90%;
     left: 20%;
 }
 
@@ -112,7 +112,7 @@ body {
 
 #durationInputFieldDIV {
     position: absolute;
-    top: 90%;
+    top: 70%;
     left: 20%;
 }
 
@@ -235,23 +235,84 @@ body {
     background: rgb(255, 55, 98);
 }
 
-#resetcorrectionID {
+#resetcorrectionIDB {
     text-align: center;
     margin-top: 10%;
     margin-left: -30%;
     float: left;
 }
 
-#YellowToGreenID {
+#YellowToGreenIDB {
     text-align: center;
     margin-top: 15%;
     margin-left: -30%;
     float: left;
 }
 
-#GreenToYellowID {
+#GreenToYellowIDB {
     text-align: center;
     margin-top: 20%;
     margin-left: -30%;
     float: left;
+}
+
+#resetcorrectionIDW {
+    text-align: center;
+    margin-top: 10%;
+    margin-right: -30%;
+    float: right;
+}
+
+#YellowToGreenIDW {
+    text-align: center;
+    margin-top: 15%;
+    margin-right: -30%;
+    float: right;
+}
+
+#GreenToYellowIDW {
+    text-align: center;
+    margin-top: 20%;
+    margin-right: -30%;
+    float: right;
+}
+
+#correctionOUT {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 300px;
+    height: 300px;
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+#cOUT {
+    background-color: rgb(31, 255, 1);
+    position: absolute;
+    left: -8%;
+    top: 50%;
+    width: 50px;
+    height: 5px;
+    border-radius: 0px;
+    transform: translate(-50%, -50%);
+}
+
+#correctionIN {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 280px;
+    height: 300px;
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+#cIN {
+    background-color: rgb(47, 189, 28);
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    width: 50px;
+    height: 5px;
+    border-radius: 15px;
+    transform: translate(-50%, -50%);
 }

@@ -147,7 +147,7 @@ function testinputSpeed() {
 
 function Bcounterclockwise() {
     if (bcounterclockwise == 0 && bclockwise == 0) {
-        positionOUT=outPredict;
+        positionOUT = outPredict;
         speed = document.getElementById("speedInputField").value;
         duration = document.getElementById("durationInputField").value;
         durationOUT = duration;
@@ -163,7 +163,7 @@ function Bcounterclockwise() {
 
 function Bclockwise() {
     if (bclockwise == 0 && bcounterclockwise == 0) {
-        positionOUT=outPredict;
+        positionOUT = outPredict;
         speed = document.getElementById("speedInputField").value;
         duration = document.getElementById("durationInputField").value;
         durationOUT = duration;
@@ -185,7 +185,7 @@ function reset() {
 
 function Wcounterclockwise() {
     if (wcounterclockwise == 0 && wclockwise == 0) {
-        positionIN=inPredict;
+        positionIN = inPredict;
         speed1 = document.getElementById("speedInputField").value;
         duration = document.getElementById("durationInputField").value;
         durationIN = duration;
@@ -201,7 +201,7 @@ function Wcounterclockwise() {
 
 function Wclockwise() {
     if (wclockwise == 0 && wcounterclockwise == 0) {
-        positionIN=inPredict;
+        positionIN = inPredict;
         speed1 = document.getElementById("speedInputField").value;
         duration = document.getElementById("durationInputField").value;
         durationIN = duration;

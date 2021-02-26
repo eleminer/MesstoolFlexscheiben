@@ -35,15 +35,30 @@
 
 
     <div>
-        <div id="resetcorrectionID">
-        <button onclick="resetcorrection()" class="fas fa-trash-alt correctionbuttons"> Reset Korrektion</button>
+        <div id="resetcorrectionIDB">
+            <button onclick="resetcorrectionB()" class="fas fa-trash-alt correctionbuttons"> Reset Korrektur B</button>
+        </div>
+        <div id="YellowToGreenIDB">
+            <button onclick="correctionYellowB()" class="fas far fa-copy correctionbuttons"> Korrektur Pos. = Gelb
+                B</button>
+        </div>
+        <div id="GreenToYellowIDB">
+            <button onclick="correctionTakeoverB()" class="fas far fa-copy correctionbuttons"> Korrektur übernehmen
+                B</button>
+        </div>
     </div>
-    <div id="YellowToGreenID">
-        <button onclick="YellowToGreen()" class="fas far fa-copy correctionbuttons"> Gelb zu Grün</button>
-    </div>
-    <div id="GreenToYellowID">
-        <button onclick="GreenToYellow()" class="fas far fa-copy correctionbuttons"> Grün zu Gelb</button>
-    </div>
+    <div>
+        <div id="resetcorrectionIDW">
+            <button onclick="resetcorrectionW()" class="fas fa-trash-alt correctionbuttons"> Reset Korrektion W</button>
+        </div>
+        <div id="YellowToGreenIDW">
+            <button onclick="correctionYellowW()" class="fas far fa-copy correctionbuttons"> Korrektur Pos. = Gelb
+                W</button>
+        </div>
+        <div id="GreenToYellowIDW">
+            <button onclick="correctionTakeoverW()" class="fas far fa-copy correctionbuttons"> Korrektur übernehmen
+                W</button>
+        </div>
     </div>
 
 
@@ -52,6 +67,8 @@
     </div>
     <div id="circleInner">
     </div>
+
+
     <div id="yellowOUT">
         <div id="yOUT">
         </div>
@@ -69,15 +86,26 @@
         </div>
     </div>
 
-    
+    <div id="correctionOUT">
+        <div id="cOUT">
+        </div>
+    </div>
+    <div id="correctionIN">
+        <div id="cIN">
+        </div>
+    </div>
 
+
+
+    <div id="durationInputFieldDIV">
+        <h5 id="durationInputFieldText">Dauer IN (sec):</h5>
+        <input type="text" id="durationInputField" value="0">
+        <h5 id="durationInputFieldText">Dauer OUT (sec):</h5>
+        <input type="text" id="durationInputField" value="0">
+    </div>
     <div id="speedInputFieldDIV">
         <h5 id="speedInputFieldText">Geschwindigkeit (steps/sec):</h5>
         <input type="text" id="speedInputField" value="0.05">
-    </div>
-    <div id="durationInputFieldDIV">
-        <h5 id="durationInputFieldText">Dauer (sec):</h5>
-        <input type="text" id="durationInputField" value="5">
     </div>
     <div id="outpositionDIV">
         <h5 id="outposition">Sektor OUT:</h5>
