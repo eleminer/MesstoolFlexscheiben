@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="CSS.css">
     <link rel="stylesheet" type="text/css" href="all.css">
+    
 
 </head>
+
 
 <body>
     <script src="propeller.js"></script>
@@ -95,11 +97,12 @@
     </div>
 </div>
 
-
+<div id="propellerIN">
     <div id="correctionIN">
         <div id="cIN">
         </div>
     </div>
+</div>
 
 
 
@@ -128,6 +131,7 @@
     </div>
     <script>
         new Propeller(document.getElementById('correctionOUT'), {inertia: 0, speed: 0});
+        new Propeller(document.getElementById('correctionIN'), {inertia: 0, speed: 0});
     </script>
 </body>
 

@@ -3,6 +3,7 @@ body {
     margin: 0;
     background: #585858;
     overflow-x: hidden;
+    overflow: hidden;
 }
 
 .htmlbuttons {
@@ -277,23 +278,14 @@ body {
     float: right;
 }
 
-#correctionOUT {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 300px;
-    height: 300px;
-    transform: translate(-50%, -50%) rotate(90deg);
-}
-
 #cOUT {
     background-color: rgb(31, 255, 1);
     position: absolute;
-    left: 6%;
+    left: 15%;
     top: 50%;
     width: 50px;
     height: 5px;
-    border-radius: 0px;
+    border-radius: 25px;
     transform: translate(-50%, -50%);
 }
 
@@ -301,15 +293,17 @@ body {
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 280px;
+    width: 300px;
     height: 300px;
+    border-radius: 150px;
+    z-index: 10;
     transform: translate(-50%, -50%) rotate(90deg);
 }
 
 #cIN {
     background-color: rgb(47, 189, 28);
     position: absolute;
-    left: 5%;
+    left: 8%;
     top: 50%;
     width: 50px;
     height: 5px;
@@ -317,13 +311,13 @@ body {
     transform: translate(-50%, -50%);
 }
 
-
 #correctionOUT {
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     z-index: 4;
+    border-radius: 250px;
     transform: translate(-50%, -50%) rotate(90deg);
 }
