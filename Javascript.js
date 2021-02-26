@@ -24,6 +24,10 @@ var angleoutcorrection = 90;
 var currentCorrectionPositionOUT = 90;
 var currentCorrectionPositionIN = 90;
 
+
+var counterIN=0;
+var counterOUT=0;
+
 myFunction();
 
 function myFunction() {
@@ -83,6 +87,10 @@ function alertFunc3() {
 }
 
 function alertFunc() {
+
+    document.getElementById("durationInputFieldIN").innerHTML = counterIN;
+    document.getElementById("durationInputFieldOUT").innerHTML = counterOUT;
+
     var incircle;
     var outcircle;
     if (112 == Math.round((((positionOUT - 90) % 360) / (360 / 111)) + 1)) {
@@ -224,7 +232,7 @@ function Wcounterclockwise() {
     if (wcounterclockwise == 0 && wclockwise == 0) {
         positionIN = inPredict;
         speed1 = document.getElementById("speedInputField").value;
-        duration = document.getElementById("durationInputField").value;
+        duration = document.getElementById("durationInputFieldIN").value;
         durationIN = duration;
         divider3 = (speed1 * 1000) / 10;
 
@@ -240,7 +248,7 @@ function Wclockwise() {
     if (wclockwise == 0 && wcounterclockwise == 0) {
         positionIN = inPredict;
         speed1 = document.getElementById("speedInputField").value;
-        duration = document.getElementById("durationInputField").value;
+        duration = document.getElementById("durationInputFieldOUT").value;
         durationIN = duration;
         divider3 = (speed1 * 1000) / 10;
 

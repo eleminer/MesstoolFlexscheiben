@@ -351,3 +351,10 @@ body {
     margin-right: -35%;
     float: right;
 }
+
+#durationInputFieldOUT{
+color: white;;
+}
+#durationInputFieldIN{
+    color: white;;
+    }
