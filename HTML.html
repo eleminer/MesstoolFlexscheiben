@@ -18,21 +18,21 @@
     <script src="Javascript.js"></script>
     <div>
         <div id="Bcounterclockwise">
-            <button onclick="Bcounterclockwise()" class="fas fa-undo-alt htmlbuttons"> B</button>
+            <button id="1" onclick="Bcounterclockwise()" class="fas fa-undo-alt htmlbuttons"> B</button>
         </div>
         <div id="reset">
             <button onclick="reset()" class="fas fa-trash-alt htmlbuttons"> Reset</button>
         </div>
         <div id="Bclockwise">
-            <button onclick="Bclockwise()" class="fas fa-redo-alt htmlbuttons"> B</button>
+            <button id="11" onclick="Bclockwise()" class="fas fa-redo-alt htmlbuttons"> B</button>
         </div>
     </div>
     <div>
         <div id="Wcounterclockwise">
-            <button onclick="Wcounterclockwise()" class="fas fa-undo-alt htmlbuttons"> W</button>
+            <button id="2" onclick="Wcounterclockwise()" class="fas fa-undo-alt htmlbuttons"> W</button>
         </div>
         <div id="Wclockwise">
-            <button onclick="Wclockwise()" class="fas fa-redo-alt htmlbuttons"> W</button>
+            <button id="22" onclick="Wclockwise()" class="fas fa-redo-alt htmlbuttons"> W</button>
         </div>
     </div>
 
@@ -177,6 +177,79 @@
 
             return (angle < 0) ? angle += 360 : angle;
         }
+
+
+
+
+        var timer = 0,
+            timerInterval,
+            button = document.getElementById("1");
+
+        button.addEventListener("mousedown", function () {
+            timerInterval = setInterval(function () {
+                timer += 1;
+                counterOUT=timer;
+            }, 1000);
+        });
+
+        button.addEventListener("mouseup", function () {
+            clearInterval(timerInterval);
+            timer = 0;
+        });
+
+
+        var timer1 = 0,
+            timerInterval1,
+            button1= document.getElementById("11");
+
+        button1.addEventListener("mousedown", function () {
+            timerInterval1 = setInterval(function () {
+                timer1 += 1;
+                counterOUT=timer1;
+            }, 1000);
+        });
+
+        button1.addEventListener("mouseup", function () {
+            clearInterval(timerInterval1);
+            timer1 = 0;
+        });
+
+
+
+        var timer2 = 0,
+            timerInterval2,
+            button2 = document.getElementById("2");
+
+        button2.addEventListener("mousedown", function () {
+            timerInterval2 = setInterval(function () {
+                timer2 += 1;
+                counterIN=timer2;
+            }, 1000);
+        });
+
+        button2.addEventListener("mouseup", function () {
+            clearInterval(timerInterval2);
+            timer2 = 0;
+        });
+
+
+        var timer22 = 0,
+            timerInterval22,
+            button22 = document.getElementById("22");
+
+        button22.addEventListener("mousedown", function () {
+            timerInterval22= setInterval(function () {
+                timer22 += 1;
+                counterIN=timer22;
+            }, 1000);
+        });
+
+        button22.addEventListener("mouseup", function () {
+            clearInterval(timerInterval22);
+            timer22 = 0;
+        });
+
+
     </script>
 </body>
 
