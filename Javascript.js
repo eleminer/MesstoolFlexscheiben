@@ -307,3 +307,15 @@ function correctionTakeoverB() {
     }
 }
 
+function minusB(){
+    outPredict=outPredict-(360/111);
+}
+function minusW(){
+    inPredict=inPredict-(360/111);
+}
+function plusB(){
+    outPredict=outPredict+(360/111);
+}
+function plusW(){
+inPredict=inPredict+(360/111);
+}
