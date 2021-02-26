@@ -194,7 +194,7 @@ function Bcounterclockwise() {
     if (bcounterclockwise == 0 && bclockwise == 0) {
         positionOUT = outPredict;
         speed = document.getElementById("speedInputField").value;
-        duration = document.getElementById("durationInputField").value;
+        duration = 10;
         durationOUT = duration;
         divider2 = (speed * 1000) / 10;
 
@@ -210,7 +210,7 @@ function Bclockwise() {
     if (bclockwise == 0 && bcounterclockwise == 0) {
         positionOUT = outPredict;
         speed = document.getElementById("speedInputField").value;
-        duration = document.getElementById("durationInputField").value;
+        duration = 10;
         durationOUT = duration;
         divider2 = (speed * 1000) / 10;
 
@@ -232,7 +232,7 @@ function Wcounterclockwise() {
     if (wcounterclockwise == 0 && wclockwise == 0) {
         positionIN = inPredict;
         speed1 = document.getElementById("speedInputField").value;
-        duration = document.getElementById("durationInputFieldIN").value;
+        duration = 10;
         durationIN = duration;
         divider3 = (speed1 * 1000) / 10;
 
@@ -248,7 +248,7 @@ function Wclockwise() {
     if (wclockwise == 0 && wcounterclockwise == 0) {
         positionIN = inPredict;
         speed1 = document.getElementById("speedInputField").value;
-        duration = document.getElementById("durationInputFieldOUT").value;
+        duration = 10;
         durationIN = duration;
         divider3 = (speed1 * 1000) / 10;
 
