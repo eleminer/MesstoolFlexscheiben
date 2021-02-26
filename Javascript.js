@@ -25,8 +25,8 @@ var currentCorrectionPositionOUT = 90;
 var currentCorrectionPositionIN = 90;
 
 
-var counterIN=0;
-var counterOUT=0;
+var counterIN = 0;
+var counterOUT = 0;
 
 myFunction();
 
@@ -109,7 +109,7 @@ function alertFunc() {
 
 
 
-    
+
 
 
 
@@ -262,7 +262,7 @@ function Wclockwise() {
 
 
 function resetcorrectionB() {
-    currentCorrectionPositionOUT=90;
+    currentCorrectionPositionOUT = 90;
     document.getElementById("correctionOUT").style.transform = "translate(-50%,-50%) rotate(" + angleoutcorrection + "deg)";
     new Propeller(document.getElementById('correctionOUT'), {
         inertia: 0,
@@ -272,7 +272,7 @@ function resetcorrectionB() {
 }
 
 function resetcorrectionW() {
-    currentCorrectionPositionIN=90;
+    currentCorrectionPositionIN = 90;
     document.getElementById("correctionIN").style.transform = "translate(-50%,-50%) rotate(" + angleincorrection + "deg)";
     new Propeller(document.getElementById('correctionIN'), {
         inertia: 0,
@@ -282,7 +282,7 @@ function resetcorrectionW() {
 }
 
 function correctionYellowB() {
-    currentCorrectionPositionOUT=outPredict;
+    currentCorrectionPositionOUT = outPredict;
     new Propeller(document.getElementById('correctionOUT'), {
         inertia: 0,
         speed: 0,
@@ -290,8 +290,9 @@ function correctionYellowB() {
     });
 
 }
+
 function correctionYellowW() {
-    currentCorrectionPositionIN=inPredict;
+    currentCorrectionPositionIN = inPredict;
     new Propeller(document.getElementById('correctionIN'), {
         inertia: 0,
         speed: 0,
@@ -302,28 +303,58 @@ function correctionYellowW() {
 
 
 function correctionTakeoverW() {
-    if (wclockwise == 0 && wcounterclockwise == 0) {
-    inPredict=currentCorrectionPositionIN;
-    positionOUT=currentCorrectionPositionOUT;
+    if (wclockwise == 0 && wcounterclockwise == 0 && bclockwise == 0 && bcounterclockwise == 0) {
+        inPredict = currentCorrectionPositionIN;
+        positionOUT = currentCorrectionPositionIN;
+    } else {
+        alert('Während einer Animation steht dieses Tool nicht zur Verfügung!');
     }
 
 }
+
 function correctionTakeoverB() {
-    if (bclockwise == 0 && bcounterclockwise == 0) {
-    outPredict=currentCorrectionPositionOUT;
-    positionIN=currentCorrectionPositionOUT;
+    if (bclockwise == 0 && bcounterclockwise == 0 && wclockwise == 0 && wcounterclockwise == 0) {
+        outPredict = currentCorrectionPositionOUT;
+        positionIN = currentCorrectionPositionOUT;
+    } else {
+        alert('Während einer Animation steht dieses Tool nicht zur Verfügung!');
     }
 }
 
-function minusB(){
-    outPredict=outPredict-(360/111);
+function minusB() {
+    if (bclockwise == 0 && bcounterclockwise == 0)
+    {
+    outPredict = outPredict - (360 / 111);
+    }
+    else {
+        alert('Während einer Animation steht dieses Tool nicht zur Verfügung!');
+    }
+
 }
-function minusW(){
-    inPredict=inPredict-(360/111);
+
+function minusW() {
+    if (wclockwise == 0 && wcounterclockwise == 0) {
+        inPredict = inPredict - (360 / 111);
+    } else {
+        alert('Während einer Animation steht dieses Tool nicht zur Verfügung!');
+    }
 }
-function plusB(){
-    outPredict=outPredict+(360/111);
+
+function plusB() {
+    if (bclockwise == 0 && bcounterclockwise == 0)
+    {
+    outPredict = outPredict + (360 / 111);
+    }
+    else {
+        alert('Während einer Animation steht dieses Tool nicht zur Verfügung!');
+    }
+
 }
-function plusW(){
-inPredict=inPredict+(360/111);
+
+function plusW() {
+    if (wclockwise == 0 && wcounterclockwise == 0) {
+        inPredict = inPredict + (360 / 111);
+    } else {
+        alert('Während einer Animation steht dieses Tool nicht zur Verfügung!');
+    }
 }
