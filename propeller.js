@@ -332,13 +332,13 @@
 
     p.initCSSPrefix = function () {
         if (Propeller.cssPrefix === undefined) {
-            if (typeof(document.body.style.transform) != 'undefined') {
+            if (typeof (document.body.style.transform) != 'undefined') {
                 Propeller.cssPrefix = '';
-            } else if (typeof(document.body.style.mozTransform) != 'undefined') {
+            } else if (typeof (document.body.style.mozTransform) != 'undefined') {
                 Propeller.cssPrefix = '-moz-';
-            } else if (typeof(document.body.style.webkitTransform) != 'undefined') {
+            } else if (typeof (document.body.style.webkitTransform) != 'undefined') {
                 Propeller.cssPrefix = '-webkit-';
-            } else if (typeof(document.body.style.msTransform) != 'undefined') {
+            } else if (typeof (document.body.style.msTransform) != 'undefined') {
                 Propeller.cssPrefix = '-ms-';
             }
         }
@@ -387,7 +387,7 @@
     }
 
     p.updateCSS = function () {
-        this.element.style[Propeller.cssPrefix + 'transform'] =this.accelerationPostfix + 'rotate(' + this._angle + 'deg) ';
+        this.element.style[Propeller.cssPrefix + 'transform'] = this.accelerationPostfix + 'rotate(' + this._angle + 'deg) ';
     }
 
     p.blockTransition = function () {
@@ -429,9 +429,9 @@
 //RequestAnimatedFrame polyfill
 window.requestAnimFrame = (function () {
     return window.requestAnimationFrame ||
-    window.webkitRequestAnimationFrame ||
-    window.mozRequestAnimationFrame ||
-    function (callback) {
-        window.setTimeout(callback, 1000 / 60);
-    };
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        function (callback) {
+            window.setTimeout(callback, 1000 / 60);
+        };
 })();
