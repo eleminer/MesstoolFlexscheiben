@@ -40,27 +40,27 @@
 
     <div>
         <div id="resetcorrectionIDB">
-            <button onclick="resetcorrectionB()" class="fas fa-trash-alt correctionbuttons"> Reset Korrektur B</button>
+            <button onclick="resetcorrectionB()" class="fas fa-trash-alt correctionbuttons"> reset correction B</button>
         </div>
         <div id="YellowToGreenIDB">
-            <button onclick="correctionYellowB()" class="fas far fa-copy correctionbuttons"> Korrektur Pos. = Gelb
+            <button onclick="correctionYellowB()" class="fas far fa-copy correctionbuttons"> correction Pos. = Gelb
                 B</button>
         </div>
         <div id="GreenToYellowIDB">
-            <button onclick="correctionTakeoverB()" class="fas far fa-copy correctionbuttons"> Korrektur übernehmen
+            <button onclick="correctionTakeoverB()" class="fas far fa-copy correctionbuttons"> correction takeover
                 B</button>
         </div>
     </div>
     <div>
         <div id="resetcorrectionIDW">
-            <button onclick="resetcorrectionW()" class="fas fa-trash-alt correctionbuttons"> Reset Korrektion W</button>
+            <button onclick="resetcorrectionW()" class="fas fa-trash-alt correctionbuttons"> reset correction W</button>
         </div>
         <div id="YellowToGreenIDW">
-            <button onclick="correctionYellowW()" class="fas far fa-copy correctionbuttons"> Korrektur Pos. = Gelb
+            <button onclick="correctionYellowW()" class="fas far fa-copy correctionbuttons"> correction Pos. = Gelb
                 W</button>
         </div>
         <div id="GreenToYellowIDW">
-            <button onclick="correctionTakeoverW()" class="fas far fa-copy correctionbuttons"> Korrektur übernehmen
+            <button onclick="correctionTakeoverW()" class="fas far fa-copy correctionbuttons"> correction takeover
                 W</button>
         </div>
     </div>
@@ -107,13 +107,13 @@
 
 
     <div id="durationInputFieldDIV">
-        <h5 id="durationInputFieldText">Dauer IN (sec):</h5>
+        <h5 id="durationInputFieldText">Duration IN (sec):</h5>
         <input type="text" id="durationInputField" value="0">
-        <h5 id="durationInputFieldText">Dauer OUT (sec):</h5>
+        <h5 id="durationInputFieldText">Duration OUT (sec):</h5>
         <input type="text" id="durationInputField" value="0">
     </div>
     <div id="speedInputFieldDIV">
-        <h5 id="speedInputFieldText">Geschwindigkeit (steps/sec):</h5>
+        <h5 id="speedInputFieldText">Speed (steps/sec):</h5>
         <input type="text" id="speedInputField" value="0.05">
     </div>
     <div id="outpositionDIV">
@@ -144,6 +144,26 @@
             inertia: 0,
             speed: 0
         });
+
+        function getRotationAngle(target) {
+            const obj = window.getComputedStyle(target, null);
+            const matrix = obj.getPropertyValue('-webkit-transform') ||
+                obj.getPropertyValue('-moz-transform') ||
+                obj.getPropertyValue('-ms-transform') ||
+                obj.getPropertyValue('-o-transform') ||
+                obj.getPropertyValue('transform');
+
+            let angle = 0;
+
+            if (matrix !== 'none') {
+                const values = matrix.split('(')[1].split(')')[0].split(',');
+                const a = values[0];
+                const b = values[1];
+                angle = Math.round(Math.atan2(b, a) * (180 / Math.PI));
+            }
+
+            return (angle < 0) ? angle += 360 : angle;
+        }
     </script>
 </body>
 

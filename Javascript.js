@@ -99,8 +99,32 @@ function alertFunc() {
     document.getElementById("insertoutsektor").innerHTML = outcircle;
     document.getElementById("insertinsektor").innerHTML = incircle;
 
-    document.getElementById("numberOUTCorrection").innerHTML = currentCorrectionPositionOUT;
-    document.getElementById("numberINCorrection").innerHTML = currentCorrectionPositionIN;
+
+
+    currentCorrectionPositionOUT = (getRotationAngle(document.getElementById('correctionOUT'))) + 360;
+    currentCorrectionPositionIN = (getRotationAngle(document.getElementById('correctionIN'))) + 360;
+    var corincircle;
+    var coroutcircle;
+    while (360 >= currentCorrectionPositionOUT) {
+        currentCorrectionPositionOUT = currentCorrectionPositionOUT + 360;
+    }
+    while (360 >= currentCorrectionPositionIN) {
+        currentCorrectionPositionIN = currentCorrectionPositionIN + 360;
+    }
+
+    if (112 == Math.round((((currentCorrectionPositionOUT - 90) % 360) / (360 / 111)) + 1)) {
+        coroutcircle = Math.round((((currentCorrectionPositionOUT - 90) % 360) / (360 / 111)) - 110);
+    } else {
+        coroutcircle = Math.round((((currentCorrectionPositionOUT - 90) % 360) / (360 / 111)) + 1);
+    }
+    if (112 == Math.round((((currentCorrectionPositionIN - 90) % 360) / (360 / 111)) + 1)) {
+        corincircle = Math.round((((currentCorrectionPositionIN - 90) % 360) / (360 / 111)) - 110);
+    } else {
+        corincircle = Math.round((((currentCorrectionPositionIN - 90) % 360) / (360 / 111)) + 1);
+    }
+
+    document.getElementById("numberOUTCorrection").innerHTML = coroutcircle;
+    document.getElementById("numberINCorrection").innerHTML = corincircle;
 
 
 
