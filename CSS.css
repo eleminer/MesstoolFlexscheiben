@@ -325,3 +325,29 @@ body {
     border-radius: 250px;
     transform: translate(-50%, -50%) rotate(90deg);
 }
+
+#minusB {
+    text-align: center;
+    margin-top: 25%;
+    margin-left: -35%;
+    float: left;
+}
+#plusB {
+    text-align: center;
+    margin-top: 31%;
+    margin-left: -35%;
+    float: left;
+}
+
+#minusW {
+    text-align: center;
+    margin-top: 25%;
+    margin-right: -35%;
+    float: right;
+}
+#plusW {
+    text-align: center;
+    margin-top: 31%;
+    margin-right: -35%;
+    float: right;
+}
