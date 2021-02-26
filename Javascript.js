@@ -43,6 +43,10 @@ function myFunction3() {
 }
 
 function alertFunc2() {
+    if (counterOUT>=0.4)
+    {
+    counterOUT=counterOUT-0.01;
+    }
     if (360 >= positionOUT) {
         positionOUT = positionOUT + 360;
     }
@@ -65,6 +69,10 @@ function alertFunc2() {
 }
 
 function alertFunc3() {
+    if (counterIN>=0.4)
+    {
+    counterIN=counterIN-0.01;
+    }
     if (360 >= positionIN) {
         positionIN = positionIN + 360;
     }
@@ -88,8 +96,8 @@ function alertFunc3() {
 
 function alertFunc() {
 
-    document.getElementById("durationInputFieldIN").innerHTML = counterIN;
-    document.getElementById("durationInputFieldOUT").innerHTML = counterOUT;
+    document.getElementById("durationInputFieldIN").innerHTML = Math.round(counterIN);
+    document.getElementById("durationInputFieldOUT").innerHTML = Math.round(counterOUT);
 
     var incircle;
     var outcircle;
@@ -322,11 +330,9 @@ function correctionTakeoverB() {
 }
 
 function minusB() {
-    if (bclockwise == 0 && bcounterclockwise == 0)
-    {
-    outPredict = outPredict - (360 / 111);
-    }
-    else {
+    if (bclockwise == 0 && bcounterclockwise == 0) {
+        outPredict = outPredict - (360 / 111);
+    } else {
         alert('Während einer Animation steht dieses Tool nicht zur Verfügung!');
     }
 
@@ -341,11 +347,9 @@ function minusW() {
 }
 
 function plusB() {
-    if (bclockwise == 0 && bcounterclockwise == 0)
-    {
-    outPredict = outPredict + (360 / 111);
-    }
-    else {
+    if (bclockwise == 0 && bcounterclockwise == 0) {
+        outPredict = outPredict + (360 / 111);
+    } else {
         alert('Während einer Animation steht dieses Tool nicht zur Verfügung!');
     }
 

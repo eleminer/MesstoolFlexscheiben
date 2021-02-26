@@ -332,6 +332,7 @@ body {
     margin-left: -35%;
     float: left;
 }
+
 #plusB {
     text-align: center;
     margin-top: 31%;
@@ -345,6 +346,7 @@ body {
     margin-right: -35%;
     float: right;
 }
+
 #plusW {
     text-align: center;
     margin-top: 31%;
@@ -352,9 +354,12 @@ body {
     float: right;
 }
 
-#durationInputFieldOUT{
-color: white;;
+#durationInputFieldOUT {
+    color: white;
+    ;
 }
-#durationInputFieldIN{
-    color: white;;
-    }
+
+#durationInputFieldIN {
+    color: white;
+    ;
+}
