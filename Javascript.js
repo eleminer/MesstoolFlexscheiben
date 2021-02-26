@@ -291,3 +291,19 @@ function correctionYellowW() {
     });
 
 }
+
+
+function correctionTakeoverW() {
+    if (wclockwise == 0 && wcounterclockwise == 0) {
+    inPredict=currentCorrectionPositionIN;
+    positionOUT=currentCorrectionPositionOUT;
+    }
+
+}
+function correctionTakeoverB() {
+    if (bclockwise == 0 && bcounterclockwise == 0) {
+    outPredict=currentCorrectionPositionOUT;
+    positionIN=currentCorrectionPositionOUT;
+    }
+}
+
