@@ -101,30 +101,7 @@ function alertFunc() {
 
 
 
-    currentCorrectionPositionOUT = (getRotationAngle(document.getElementById('correctionOUT'))) + 360;
-    currentCorrectionPositionIN = (getRotationAngle(document.getElementById('correctionIN'))) + 360;
-    var corincircle;
-    var coroutcircle;
-    while (360 >= currentCorrectionPositionOUT) {
-        currentCorrectionPositionOUT = currentCorrectionPositionOUT + 360;
-    }
-    while (360 >= currentCorrectionPositionIN) {
-        currentCorrectionPositionIN = currentCorrectionPositionIN + 360;
-    }
-
-    if (112 == Math.round((((currentCorrectionPositionOUT - 90) % 360) / (360 / 111)) + 1)) {
-        coroutcircle = Math.round((((currentCorrectionPositionOUT - 90) % 360) / (360 / 111)) - 110);
-    } else {
-        coroutcircle = Math.round((((currentCorrectionPositionOUT - 90) % 360) / (360 / 111)) + 1);
-    }
-    if (112 == Math.round((((currentCorrectionPositionIN - 90) % 360) / (360 / 111)) + 1)) {
-        corincircle = Math.round((((currentCorrectionPositionIN - 90) % 360) / (360 / 111)) - 110);
-    } else {
-        corincircle = Math.round((((currentCorrectionPositionIN - 90) % 360) / (360 / 111)) + 1);
-    }
-
-    document.getElementById("numberOUTCorrection").innerHTML = coroutcircle;
-    document.getElementById("numberINCorrection").innerHTML = corincircle;
+    
 
 
 
@@ -147,10 +124,38 @@ function alertFunc() {
         incircleY = Math.round((((inPredict - 90) % 360) / (360 / 111)) + 1);
     }
 
+
+
     document.getElementById("insertoutsektorpredict").innerHTML = outcircleY;
     document.getElementById("insertinsektorpredict").innerHTML = incircleY;
     document.getElementById("yellowOUT").style.transform = "translate(-50%,-50%) rotate(" + outPredict + "deg)";
     document.getElementById("yellowIN").style.transform = "translate(-50%,-50%) rotate(" + inPredict + "deg)";
+
+
+    currentCorrectionPositionOUT = (getRotationAngle(document.getElementById('correctionOUT'))) + 360;
+    currentCorrectionPositionIN = (getRotationAngle(document.getElementById('correctionIN'))) + 360;
+    var corincircle;
+    var coroutcircle;
+    while (360 >= currentCorrectionPositionOUT) {
+        currentCorrectionPositionOUT = currentCorrectionPositionOUT + 360;
+    }
+    while (360 >= currentCorrectionPositionIN) {
+        currentCorrectionPositionIN = currentCorrectionPositionIN + 360;
+    }
+
+    if (112 == Math.round((((currentCorrectionPositionOUT - 90) % 360) / (360 / 111)) + 1)) {
+        coroutcircle = Math.round((((currentCorrectionPositionOUT - 90) % 360) / (360 / 111)) - 110);
+    } else {
+        coroutcircle = Math.round((((currentCorrectionPositionOUT - 90) % 360) / (360 / 111)) + 1);
+    }
+    if (112 == Math.round((((currentCorrectionPositionIN - 90) % 360) / (360 / 111)) + 1)) {
+        corincircle = Math.round((((currentCorrectionPositionIN - 90) % 360) / (360 / 111)) - 110);
+    } else {
+        corincircle = Math.round((((currentCorrectionPositionIN - 90) % 360) / (360 / 111)) + 1);
+    }
+
+    document.getElementById("numberOUTCorrection").innerHTML = corincircle;
+    document.getElementById("numberINCorrection").innerHTML = coroutcircle;
 
 
 
@@ -249,6 +254,7 @@ function Wclockwise() {
 
 
 function resetcorrectionB() {
+    currentCorrectionPositionOUT=90;
     document.getElementById("correctionOUT").style.transform = "translate(-50%,-50%) rotate(" + angleoutcorrection + "deg)";
     new Propeller(document.getElementById('correctionOUT'), {
         inertia: 0,
@@ -258,10 +264,30 @@ function resetcorrectionB() {
 }
 
 function resetcorrectionW() {
+    currentCorrectionPositionIN=90;
     document.getElementById("correctionIN").style.transform = "translate(-50%,-50%) rotate(" + angleincorrection + "deg)";
     new Propeller(document.getElementById('correctionIN'), {
         inertia: 0,
         speed: 0,
         angle: 90
     });
+}
+
+function correctionYellowB() {
+    currentCorrectionPositionOUT=outPredict;
+    new Propeller(document.getElementById('correctionOUT'), {
+        inertia: 0,
+        speed: 0,
+        angle: currentCorrectionPositionOUT
+    });
+
+}
+function correctionYellowW() {
+    currentCorrectionPositionIN=inPredict;
+    new Propeller(document.getElementById('correctionIN'), {
+        inertia: 0,
+        speed: 0,
+        angle: currentCorrectionPositionIN
+    });
+
 }
