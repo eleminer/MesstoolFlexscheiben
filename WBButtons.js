@@ -1,12 +1,9 @@
 function minusB() {
-    var temp=0;
-    if(lastactionOUT==0)
-    {
-        temp= gradBCorr - (360 / 111)
-    }
-    else
-    {
-        temp= gradBCorr + (360 / 111)
+    var temp = 0;
+    if (lastactionOUT == 0) {
+        temp = gradBCorr - (360 / 111)
+    } else {
+        temp = gradBCorr + (360 / 111)
     }
     new Propeller(document.getElementById('correctionOUT'), {
         inertia: 0,
@@ -16,14 +13,11 @@ function minusB() {
 }
 
 function plusB() {
-    var temp=0;
-    if(lastactionOUT==0)
-    {
-        temp= gradBCorr + (360 / 111)
-    }
-    else
-    {
-        temp= gradBCorr - (360 / 111)
+    var temp = 0;
+    if (lastactionOUT == 0) {
+        temp = gradBCorr + (360 / 111)
+    } else {
+        temp = gradBCorr - (360 / 111)
     }
     new Propeller(document.getElementById('correctionOUT'), {
         inertia: 0,
@@ -33,14 +27,11 @@ function plusB() {
 }
 
 function minusW() {
-    var temp=0;
-    if(lastactionIN==0)
-    {
-        temp= gradWCorr - (360 / 111)
-    }
-    else
-    {
-        temp= gradWCorr + (360 / 111)
+    var temp = 0;
+    if (lastactionIN == 0) {
+        temp = gradWCorr - (360 / 111)
+    } else {
+        temp = gradWCorr + (360 / 111)
     }
     new Propeller(document.getElementById('correctionIN'), {
         inertia: 0,
@@ -50,14 +41,11 @@ function minusW() {
 }
 
 function plusW() {
-    var temp=0;
-    if(lastactionIN==0)
-    {
-        temp= gradWCorr + (360 / 111)
-    }
-    else
-    {
-        temp= gradWCorr - (360 / 111)
+    var temp = 0;
+    if (lastactionIN == 0) {
+        temp = gradWCorr + (360 / 111)
+    } else {
+        temp = gradWCorr - (360 / 111)
     }
     new Propeller(document.getElementById('correctionIN'), {
         inertia: 0,
@@ -65,4 +53,3 @@ function plusW() {
         angle: temp
     });
 }
-
