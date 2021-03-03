@@ -7,6 +7,12 @@ var posBCorr = 0;
 gradBCorr = 0;
 var posWCorr = 0;
 gradWCorr = 0;
+
+
+//delays
+var durationINms=0;
+var durationOUTms=0;
+//delays
 myFunction();
 
 function myFunction() {
@@ -16,7 +22,7 @@ function myFunction() {
 function main() {
     readPositionCorr();
     convertGradToSegmentYellow();
-    sendDataToInterface(0, 0, posW, posB, posWCorr, posBCorr);
+    sendDataToInterface(durationINms, durationOUTms, posW, posB, posWCorr, posBCorr);
     sendDataToYellowPointIN(gradW);
     sendDataToYellowPointOUT(gradB);
 
@@ -60,7 +66,6 @@ function sendDataToYellowPointIN(incircle) {
 function sendDataToYellowPointIN(outcircle) {
     document.getElementById("yellowOUT").style.transform = "translate(-50%,-50%) rotate(" + outcircle + "deg)";
 }
-
 
 function convertGradToSegmentYellow() {
     while (gradB < 360 * 2) {

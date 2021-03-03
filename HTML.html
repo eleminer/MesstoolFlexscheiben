@@ -19,7 +19,7 @@
 
     <!--Buttons-->
     <div id="Bcounterclockwise">
-        <button id="BcounterclockwiseID" onclick="Bcounterclockwise()" class="fas fa-undo-alt htmlbuttons"> B</button>
+        <button id="BcounterclockwiseID" onclick="Bcounterclockwise()" class="fas fa-undo-alt htmlbuttons Bdelay"> B</button>
     </div>
 
     <div id="reset">
@@ -27,15 +27,15 @@
     </div>
 
     <div id="Bclockwise">
-        <button id="BcounterclockwiseID" onclick="Bclockwise()" class="fas fa-redo-alt htmlbuttons"> B</button>
+        <button id="BclockwiseID" onclick="Bclockwise()" class="fas fa-redo-alt htmlbuttons Bdelay"> B</button>
     </div>
 
     <div id="Wcounterclockwise">
-        <button id="WcounterclockwiseID" onclick="Wcounterclockwise()" class="fas fa-undo-alt htmlbuttons"> W</button>
+        <button id="WcounterclockwiseID" onclick="Wcounterclockwise()" class="fas fa-undo-alt htmlbuttons Wdelay"> W</button>
     </div>
 
     <div id="Wclockwise">
-        <button id="WclockwiseID" onclick="Wclockwise()" class="fas fa-redo-alt htmlbuttons"> W</button>
+        <button id="WclockwiseID" onclick="Wclockwise()" class="fas fa-redo-alt htmlbuttons Wdelay"> W</button>
     </div>
 
     <div id="minusB">
@@ -140,6 +140,76 @@
 
             return (angle < 0) ? angle += 360 : angle;
         }
+
+
+        //ButtonDelay W
+        var timer = 0,
+            timerInterval,
+            button = document.getElementById("WclockwiseID");
+
+        button.addEventListener("mousedown", function () {
+            timerInterval = setInterval(function () {
+                timer += 10;
+                durationINms = timer;
+            }, 10);
+        });
+
+        button.addEventListener("mouseup", function () {
+            clearInterval(timerInterval);
+            timer = 0;
+        });
+
+        //ButtonDelay W
+        var timer2 = 0,
+            timerInterval2,
+            button2 = document.getElementById("WcounterclockwiseID");
+
+        button2.addEventListener("mousedown", function () {
+            timerInterval2 = setInterval(function () {
+                timer2 += 10;
+                durationINms = timer2;
+            }, 10);
+        });
+
+        button2.addEventListener("mouseup", function () {
+            clearInterval(timerInterval2);
+            timer2 = 0;
+        });
+
+        
+        //ButtonDelay B
+        var timer3 = 0,
+            timerInterval3,
+            button3 = document.getElementById("BclockwiseID");
+
+        button3.addEventListener("mousedown", function () {
+            timerInterval3 = setInterval(function () {
+                timer3 += 10;
+                durationOUTms = timer3;
+            }, 10);
+        });
+
+        button3.addEventListener("mouseup", function () {
+            clearInterval(timerInterval3);
+            timer3 = 0;
+        });
+
+        //ButtonDelay B
+        var timer4 = 0,
+            timerInterval4,
+            button4 = document.getElementById("BcounterclockwiseID");
+
+        button4.addEventListener("mousedown", function () {
+            timerInterval4 = setInterval(function () {
+                timer4 += 10;
+                durationOUTms = timer4;
+            }, 10);
+        });
+
+        button4.addEventListener("mouseup", function () {
+            clearInterval(timerInterval4);
+            timer4 = 0;
+        });
     </script>
 
 
