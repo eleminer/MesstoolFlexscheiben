@@ -10,9 +10,14 @@ gradWCorr = 0;
 
 
 //delays
-var durationINms=0;
-var durationOUTms=0;
+var durationINms = 0;
+var durationOUTms = 0;
 //delays
+
+//lastaction
+var lastactionIN = 0;
+var lastactionOUT = 0;
+//0=mit dem Uhrzeigersinn 1=gegen den Uhrzeigersinn 
 myFunction();
 
 function myFunction() {
@@ -20,6 +25,7 @@ function myFunction() {
 }
 
 function main() {
+    console.log(gradWCorr);
     readPositionCorr();
     convertGradToSegmentYellow();
     sendDataToInterface(durationINms, durationOUTms, posW, posB, posWCorr, posBCorr);
@@ -63,7 +69,7 @@ function sendDataToYellowPointIN(incircle) {
     document.getElementById("yellowIN").style.transform = "translate(-50%,-50%) rotate(" + incircle + "deg)";
 }
 
-function sendDataToYellowPointIN(outcircle) {
+function sendDataToYellowPointOUT(outcircle) {
     document.getElementById("yellowOUT").style.transform = "translate(-50%,-50%) rotate(" + outcircle + "deg)";
 }
 
