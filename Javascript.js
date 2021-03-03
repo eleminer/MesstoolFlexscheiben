@@ -4,7 +4,7 @@ gradW = 0;
 var posB = 0;
 gradB = 0;
 var posBCorr = 0;
-gradBCorr = 00;
+gradBCorr = 0;
 var posWCorr = 0;
 gradWCorr = 0;
 myFunction();
@@ -17,8 +17,10 @@ function main() {
     readPositionCorr();
     convertGradToSegmentYellow();
     sendDataToInterface(0, 0, posW, posB, posWCorr, posBCorr);
-    sendDataToYellowIN(gradW);
-    sendDataToYellowOUT(gradB);
+    sendDataToYellowPointIN(gradW);
+    sendDataToYellowPointOUT(gradB);
+
+
 }
 
 function sendDataToInterface(durationIN, durationOUT, sektorIn, sektorOUT, sektorPredictIN, sektorPredictOUT) {
@@ -94,4 +96,11 @@ function correctionW(a) {
         speed: 0,
         angle: a
     });
+}
+
+function reset() {
+    correctionB(0);
+    correctionW(0);
+    gradW = 0;
+    gradB = 0;
 }
