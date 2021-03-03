@@ -1,5 +1,4 @@
 # MesstoolFlexscheiben
-![](animation.gif)
 
 # Quickstart guide:
 1. Download Repository
