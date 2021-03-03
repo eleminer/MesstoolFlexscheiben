@@ -1,21 +1,18 @@
 body {
     padding: 0;
     margin: 0;
-    background: #585858;
-    overflow-x: hidden;
-    overflow: hidden;
+    background: #000000;
 }
 
 .htmlbuttons {
     background-color: #688db8;
     border: none;
     color: white;
-    padding: 15px 32px;
+    width: 120px;
+    height: 50px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    width: 100%;
+    line-height: 1.1em;
+    font-size: 1.1em;
 }
 
 .htmlbuttons:hover {
@@ -59,6 +56,34 @@ body {
     transform: translate(-50%, -50%);
 }
 
+#minusB {
+    text-align: center;
+    margin-top: 25%;
+    margin-left: -30%;
+    float: left;
+}
+
+#plusB {
+    text-align: center;
+    margin-top: 31%;
+    margin-left: -30%;
+    float: left;
+}
+
+#minusW {
+    text-align: center;
+    margin-top: 25%;
+    margin-right: -30%;
+    float: right;
+}
+
+#plusW {
+    text-align: center;
+    margin-top: 31%;
+    margin-right: -30%;
+    float: right;
+}
+
 #circleOut {
     background-color: #688db8;
     position: absolute;
@@ -81,107 +106,6 @@ body {
     transform: translate(-50%, -50%);
 }
 
-#speedInputFieldDIV {
-    position: absolute;
-    top: 90%;
-    left: 20%;
-}
-
-#speedInputFieldText {
-    color: white;
-}
-
-#pointOut {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 300px;
-    height: 300px;
-    transform: translate(-50%, -50%) rotate(90deg);
-}
-
-#pointIn {
-    background-color: #0a23ff;
-    position: absolute;
-    left: -8%;
-    top: 50%;
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
-    transform: translate(-50%, -50%);
-}
-
-#durationInputFieldDIV {
-    position: absolute;
-    top: 70%;
-    left: 20%;
-}
-
-#durationInputFieldText {
-    color: white;
-}
-
-#pointOut1 {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 300px;
-    height: 300px;
-    transform: translate(-50%, -50%) rotate(90deg);
-}
-
-#pointIn1 {
-    background-color: #0a23ff;
-    position: absolute;
-    left: 5%;
-    top: 50%;
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
-    transform: translate(-50%, -50%);
-}
-
-#outpositionDIV {
-    position: absolute;
-    top: 80%;
-    left: 75%;
-}
-
-#outposition {
-    color: white;
-}
-
-#inpositionDIV {
-    position: absolute;
-    top: 60%;
-    left: 75%;
-}
-
-#inposition {
-    color: white;
-}
-
-#WDIV {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.insertscounter {
-    color: #0a23ff;
-}
-
-.insertscounterpredict {
-    color: rgb(255, 217, 0);
-}
-
-.insertcountercorrection {
-    color: rgb(31, 255, 1);
-}
-
-
-
 #yellowIN {
     position: absolute;
     left: 50%;
@@ -194,7 +118,7 @@ body {
 #yIN {
     background-color: rgb(255, 217, 0);
     position: absolute;
-    left: 5%;
+    left: 7%;
     top: 50%;
     width: 30px;
     height: 30px;
@@ -222,76 +146,6 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.correctionbuttons {
-    background-color: #688db8;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 15px;
-    width: 100%;
-}
-
-.correctionbuttons:hover {
-    color: white;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    background: rgb(255, 55, 98);
-}
-
-#resetcorrectionIDB {
-    text-align: center;
-    margin-top: 10%;
-    margin-left: -30%;
-    float: left;
-}
-
-#YellowToGreenIDB {
-    text-align: center;
-    margin-top: 15%;
-    margin-left: -30%;
-    float: left;
-}
-
-#GreenToYellowIDB {
-    text-align: center;
-    margin-top: 20%;
-    margin-left: -30%;
-    float: left;
-}
-
-#resetcorrectionIDW {
-    text-align: center;
-    margin-top: 10%;
-    margin-right: -30%;
-    float: right;
-}
-
-#YellowToGreenIDW {
-    text-align: center;
-    margin-top: 15%;
-    margin-right: -30%;
-    float: right;
-}
-
-#GreenToYellowIDW {
-    text-align: center;
-    margin-top: 20%;
-    margin-right: -30%;
-    float: right;
-}
-
-#cOUT {
-    background-color: rgb(31, 255, 1);
-    position: absolute;
-    left: 15%;
-    top: 50%;
-    width: 50px;
-    height: 5px;
-    border-radius: 25px;
-    transform: translate(-50%, -50%);
-}
 
 #correctionIN {
     position: absolute;
@@ -299,13 +153,13 @@ body {
     top: 50%;
     width: 300px;
     height: 300px;
-    border-radius: 150px;
     z-index: 10;
+    border-radius: 150px;
     transform: translate(-50%, -50%) rotate(90deg);
 }
 
 #cIN {
-    background-color: rgb(31, 255, 1);
+    background-color: rgb(0, 255, 21);
     position: absolute;
     left: 8%;
     top: 50%;
@@ -321,45 +175,43 @@ body {
     top: 50%;
     width: 500px;
     height: 500px;
-    z-index: 4;
-    border-radius: 250px;
     transform: translate(-50%, -50%) rotate(90deg);
 }
 
-#minusB {
-    text-align: center;
-    margin-top: 25%;
-    margin-left: -35%;
-    float: left;
+#cOUT {
+    background-color: rgb(0, 255, 21);
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    width: 50px;
+    height: 5px;
+    border-radius: 15px;
+    transform: translate(-50%, -50%);
 }
 
-#plusB {
-    text-align: center;
-    margin-top: 31%;
-    margin-left: -35%;
-    float: left;
+#durationInputFieldDIV {
+    position: absolute;
+    top: 70%;
+    left: 20%;
 }
 
-#minusW {
-    text-align: center;
-    margin-top: 25%;
-    margin-right: -35%;
-    float: right;
-}
-
-#plusW {
-    text-align: center;
-    margin-top: 31%;
-    margin-right: -35%;
-    float: right;
-}
-
-#durationInputFieldOUT {
+.durationcounter {
     color: white;
     ;
 }
 
-#durationInputFieldIN {
+#outpositionDIV {
+    position: absolute;
+    top: 80%;
+    left: 70%;
+}
+
+#inpositionDIV {
+    position: absolute;
+    top: 60%;
+    left: 70%;
+}
+
+.insertscounter {
     color: white;
-    ;
 }

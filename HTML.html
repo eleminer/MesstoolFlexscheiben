@@ -8,146 +8,107 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="CSS.css">
     <link rel="stylesheet" type="text/css" href="all.css">
-
-
 </head>
 
 
 <body>
+
     <script src="propeller.js"></script>
     <script src="Javascript.js"></script>
-    <div>
-        <div id="Bcounterclockwise">
-            <button id="1" onclick="Bcounterclockwise()" class="fas fa-undo-alt htmlbuttons"> B</button>
-        </div>
-        <div id="reset">
-            <button onclick="reset()" class="fas fa-trash-alt htmlbuttons"> Reset</button>
-        </div>
-        <div id="Bclockwise">
-            <button id="11" onclick="Bclockwise()" class="fas fa-redo-alt htmlbuttons"> B</button>
-        </div>
-    </div>
-    <div>
-        <div id="Wcounterclockwise">
-            <button id="2" onclick="Wcounterclockwise()" class="fas fa-undo-alt htmlbuttons"> W</button>
-        </div>
-        <div id="Wclockwise">
-            <button id="22" onclick="Wclockwise()" class="fas fa-redo-alt htmlbuttons"> W</button>
-        </div>
+
+    <!--Buttons-->
+    <div id="Bcounterclockwise">
+        <button id="BcounterclockwiseID" onclick="Bcounterclockwise()" class="fas fa-undo-alt htmlbuttons"> B</button>
     </div>
 
-
-
-    <div>
-        <div id="resetcorrectionIDB">
-            <button onclick="resetcorrectionB()" class="fas fa-trash-alt correctionbuttons"> reset correction B</button>
-        </div>
-        <div id="YellowToGreenIDB">
-            <button onclick="correctionYellowB()" class="fas far fa-copy correctionbuttons"> correction Pos. = Yellow
-                B</button>
-        </div>
-        <div id="GreenToYellowIDB">
-            <button onclick="correctionTakeoverB()" class="fas far fa-copy correctionbuttons"> correction takeover
-                B</button>
-        </div>
+    <div id="reset">
+        <button onclick="reset()" class="fas fa-trash-alt htmlbuttons positionTOP"> Reset</button>
     </div>
-    <div>
-        <div id="resetcorrectionIDW">
-            <button onclick="resetcorrectionW()" class="fas fa-trash-alt correctionbuttons"> reset correction W</button>
-        </div>
-        <div id="YellowToGreenIDW">
-            <button onclick="correctionYellowW()" class="fas far fa-copy correctionbuttons"> correction Pos. = Yellow
-                W</button>
-        </div>
-        <div id="GreenToYellowIDW">
-            <button onclick="correctionTakeoverW()" class="fas far fa-copy correctionbuttons"> correction takeover
-                W</button>
-        </div>
+
+    <div id="Bclockwise">
+        <button id="BcounterclockwiseID" onclick="Bclockwise()" class="fas fa-redo-alt htmlbuttons"> B</button>
+    </div>
+
+    <div id="Wcounterclockwise">
+        <button id="WcounterclockwiseID" onclick="Wcounterclockwise()" class="fas fa-undo-alt htmlbuttons"> W</button>
+    </div>
+
+    <div id="Wclockwise">
+        <button id="WclockwiseID" onclick="Wclockwise()" class="fas fa-redo-alt htmlbuttons"> W</button>
     </div>
 
     <div id="minusB">
         <button onclick="minusB()" class="fab fa-buffer htmlbuttons"> B -</button>
     </div>
+
     <div id="plusB">
         <button onclick="plusB()" class="fab fa-buffer htmlbuttons"> B +</button>
     </div>
+
     <div id="minusW">
         <button onclick="minusW()" class="fab fa-buffer htmlbuttons"> W -</button>
     </div>
+
     <div id="plusW">
         <button onclick="plusW()" class="fab fa-buffer htmlbuttons"> W +</button>
     </div>
+    <!--Buttons-->
 
 
-
+    <!--circles-->
     <div id="circleOut">
     </div>
     <div id="circleInner">
     </div>
+    <!--circles-->
 
 
+    <!--yellowPoints-->
     <div id="yellowOUT">
         <div id="yOUT">
         </div>
     </div>
+
     <div id="yellowIN">
         <div id="yIN">
         </div>
     </div>
-    <div id="pointOut">
-        <div id="pointIn">
+    <!--yellowPoints-->
+
+    <!--correctionLine-->
+    <div id="correctionOUT">
+        <div id="cOUT">
         </div>
     </div>
-    <div id="pointOut1">
-        <div id="pointIn1">
+    <div id="correctionIN">
+        <div id="cIN">
         </div>
     </div>
+    <!--correctionLine-->
 
-    <div id="propellerOUT">
-        <div id="correctionOUT">
-            <div id="cOUT">
-            </div>
-        </div>
-    </div>
-
-    <div id="propellerIN">
-        <div id="correctionIN">
-            <div id="cIN">
-            </div>
-        </div>
-    </div>
-
-
-
+    <!--durationcounter-->
     <div id="durationInputFieldDIV">
-        <h5 id="durationInputFieldText">Duration IN (sec):</h5>
-        <h5 id="durationInputFieldIN"></h5>
-        <h5 id="durationInputFieldText">Duration OUT (sec):</h5>
-        <h5 id="durationInputFieldOUT"></h5>
+        <h5 id="durationInputFieldText" class="durationcounter">Duration IN (sec):</h5>
+        <h5 id="durationInputFieldIN" class="durationcounter"></h5>
+        <h5 id="durationInputFieldText" class="durationcounter">Duration OUT (sec):</h5>
+        <h5 id="durationInputFieldOUT" class="durationcounter"></h5>
     </div>
-    <div id="speedInputFieldDIV">
-        <h5 id="speedInputFieldText">Speed (steps/sec):</h5>
-        <input type="text" id="speedInputField" value="0.05">
-    </div>
+    <!--durationcounter-->
+
+    <!--insertsPositions-->
     <div id="outpositionDIV">
-        <h5 id="outposition">Sektor OUT:</h5>
+        <h5 id="outposition" class=insertscounter>Sektor OUT:</h5>
         <h5 id="insertoutsektor" class="insertscounter"></h5>
-        <h5 id="insertoutsektorpredict" class="insertscounterpredict"></h5>
-
-        <h5 id="numberINCorrection" class="insertcountercorrection"></h5>
-
+        <h5 id="insertoutsektorpredict" class="insertscounter"></h5>
     </div>
     <div id="inpositionDIV">
-        <h5 id="inposition">Sektor IN:</h5>
+        <h5 id="inposition" class=insertscounter>Sektor IN:</h5>
         <h5 id="insertinsektor" class="insertscounter"></h5>
-        <h5 id="insertinsektorpredict" class="insertscounterpredict"></h5>
-
-        <h5 id="numberOUTCorrection" class="insertcountercorrection"></h5>
-
+        <h5 id="insertinsektorpredict" class="insertscounter"></h5>
     </div>
-    <div id="WDIV">
-        <h1 id="inposition">W</h1>
-    </div>
+    <!--insertPositions-->
+
+    <!--Propellers-->
     <script>
         new Propeller(document.getElementById('correctionOUT'), {
             inertia: 0,
@@ -157,6 +118,7 @@
             inertia: 0,
             speed: 0
         });
+
 
         function getRotationAngle(target) {
             const obj = window.getComputedStyle(target, null);
@@ -177,78 +139,9 @@
 
             return (angle < 0) ? angle += 360 : angle;
         }
-
-
-
-
-        var timer = 0,
-            timerInterval,
-            button = document.getElementById("1");
-
-        button.addEventListener("mousedown", function () {
-            timerInterval = setInterval(function () {
-                timer += 1;
-                counterOUT = timer;
-            }, 1000);
-        });
-
-        button.addEventListener("mouseup", function () {
-            clearInterval(timerInterval);
-            timer = 0;
-        });
-
-
-        var timer1 = 0,
-            timerInterval1,
-            button1 = document.getElementById("11");
-
-        button1.addEventListener("mousedown", function () {
-            timerInterval1 = setInterval(function () {
-                timer1 += 1;
-                counterOUT = timer1;
-            }, 1000);
-        });
-
-        button1.addEventListener("mouseup", function () {
-            clearInterval(timerInterval1);
-            timer1 = 0;
-        });
-
-
-
-        var timer2 = 0,
-            timerInterval2,
-            button2 = document.getElementById("2");
-
-        button2.addEventListener("mousedown", function () {
-            timerInterval2 = setInterval(function () {
-                timer2 += 1;
-                counterIN = timer2;
-            }, 1000);
-        });
-
-        button2.addEventListener("mouseup", function () {
-            clearInterval(timerInterval2);
-            timer2 = 0;
-        });
-
-
-        var timer22 = 0,
-            timerInterval22,
-            button22 = document.getElementById("22");
-
-        button22.addEventListener("mousedown", function () {
-            timerInterval22 = setInterval(function () {
-                timer22 += 1;
-                counterIN = timer22;
-            }, 1000);
-        });
-
-        button22.addEventListener("mouseup", function () {
-            clearInterval(timerInterval22);
-            timer22 = 0;
-        });
     </script>
+
+
 </body>
 
 </html>
