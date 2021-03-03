@@ -112,14 +112,14 @@ body {
     top: 50%;
     width: 300px;
     height: 300px;
-    transform: translate(-50%, -50%) rotate(90deg);
+    transform: translate(-50%, -50%) rotate(0deg);
 }
 
 #yIN {
     background-color: rgb(255, 217, 0);
     position: absolute;
-    left: 7%;
-    top: 50%;
+    left: 50%;
+    top: 7%;
     width: 30px;
     height: 30px;
     border-radius: 15px;
@@ -132,14 +132,14 @@ body {
     top: 50%;
     width: 300px;
     height: 300px;
-    transform: translate(-50%, -50%) rotate(90deg);
+    transform: translate(-50%, -50%) rotate(00deg);
 }
 
 #yOUT {
     background-color: rgb(255, 217, 0);
     position: absolute;
-    left: -8%;
-    top: 50%;
+    left: 50%;
+    top: -8%;
     width: 30px;
     height: 30px;
     border-radius: 15px;
@@ -155,16 +155,16 @@ body {
     height: 300px;
     z-index: 10;
     border-radius: 150px;
-    transform: translate(-50%, -50%) rotate(90deg);
+    transform: translate(-50%, -50%) rotate(00deg);
 }
 
 #cIN {
     background-color: rgb(0, 255, 21);
     position: absolute;
-    left: 8%;
-    top: 50%;
-    width: 50px;
-    height: 5px;
+    left: 50%;
+    top: 9%;
+    width: 5px;
+    height: 50px;
     border-radius: 15px;
     transform: translate(-50%, -50%);
 }
@@ -175,16 +175,16 @@ body {
     top: 50%;
     width: 500px;
     height: 500px;
-    transform: translate(-50%, -50%) rotate(90deg);
+    transform: translate(-50%, -50%) rotate(00deg);
 }
 
 #cOUT {
     background-color: rgb(0, 255, 21);
     position: absolute;
-    left: 15%;
-    top: 50%;
-    width: 50px;
-    height: 5px;
+    left: 50%;
+    top: 15%;
+    width: 5px;
+    height: 50px;
     border-radius: 15px;
     transform: translate(-50%, -50%);
 }
@@ -214,4 +214,11 @@ body {
 
 .insertscounter {
     color: white;
+}
+
+.green {
+    color: rgb(0, 255, 21);
+}
+.yellow {
+    color: rgb(255, 217, 0);
 }

@@ -22,7 +22,7 @@
     var jqPluginName = 'propeller';
 
     var defaults = {
-        angle: 90,
+        angle: 0,
         speed: 0,
         inertia: 0,
         minimalSpeed: 0.001,
