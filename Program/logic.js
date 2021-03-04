@@ -8,19 +8,19 @@
 //all in grad
 
 //taster sperren
+
+//resetYellow()
+//resetCorr()
+
+//1 = bcounterclockwise
+//2 = bclockwise
+//3 = wcounterclockwise
+//4= wclockwise
 var noinput=0;
 
 
 function mathM(number)
 {
-console.log(number);
-if (number==1)
-{
-    gradB=300;
-}
-if (number==2)
-{
-    gradB=100;
-}
+
 }
 

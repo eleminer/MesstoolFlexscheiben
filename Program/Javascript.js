@@ -110,20 +110,17 @@ function correctionW(a) {
 
 
 function resetCorr() {
-if (noinput==0)
-{
-correctionB(gradB)
-correctionW(gradW)
-}
+    if (noinput == 0) {
+        correctionB(gradB)
+        correctionW(gradW)
+    }
 }
 
 function resetYellow() {
-if (noinput==0)
-{
-correctionB(gradBCorr-gradB);
-correctionW(gradWCorr-gradW);
-gradW=0;
-gradB=0;
+    if (noinput == 0) {
+        correctionB(gradBCorr - gradB);
+        correctionW(gradWCorr - gradW);
+        gradW = 0;
+        gradB = 0;
+    }
 }
-}
-//hello
