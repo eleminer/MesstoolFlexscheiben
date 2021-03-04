@@ -21,7 +21,7 @@
 
     <!--Buttons-->
     <div id="Bcounterclockwise">
-        <button id="BcounterclockwiseID" onclick="Bcounterclockwise()" class="fas fa-undo-alt htmlbuttons Bdelay">
+        <button id="BcounterclockwiseID" onclick="mathM(1)" class="fas fa-undo-alt htmlbuttons Bdelay">
             B</button>
     </div>
 
@@ -31,16 +31,16 @@
     </div>
 
     <div id="Bclockwise">
-        <button id="BclockwiseID" onclick="Bclockwise()" class="fas fa-redo-alt htmlbuttons Bdelay"> B</button>
+        <button id="BclockwiseID" onclick="mathM(2)" class="fas fa-redo-alt htmlbuttons Bdelay"> B</button>
     </div>
 
     <div id="Wcounterclockwise">
-        <button id="WcounterclockwiseID" onclick="Wcounterclockwise()" class="fas fa-undo-alt htmlbuttons Wdelay">
+        <button id="WcounterclockwiseID" onclick="mathM(3)" class="fas fa-undo-alt htmlbuttons Wdelay">
             W</button>
     </div>
 
     <div id="Wclockwise">
-        <button id="WclockwiseID" onclick="Wclockwise()" class="fas fa-redo-alt htmlbuttons Wdelay"> W</button>
+        <button id="WclockwiseID" onclick="mathM(4)" class="fas fa-redo-alt htmlbuttons Wdelay"> W</button>
     </div>
 
     <div id="minusB">
@@ -58,7 +58,6 @@
     <div id="plusW">
         <button onclick="plusW()" class="fab fa-buffer htmlbuttons"> W +</button>
     </div>
-    <!--Buttons-->
 
 
     <!--circles-->
@@ -148,15 +147,21 @@
 
 
         //ButtonDelay W
+        var additor = 10;
+        var multiplikator = 10;
+
         var timer = 0,
             timerInterval,
             button = document.getElementById("WclockwiseID");
 
         button.addEventListener("mousedown", function () {
             timerInterval = setInterval(function () {
-                timer += 10;
+                timer += additor;
+                if(noinput==0)
+                {
                 durationINms = timer;
-            }, 10);
+                }
+            }, multiplikator);
         });
 
         button.addEventListener("mouseup", function () {
@@ -171,9 +176,12 @@
 
         button2.addEventListener("mousedown", function () {
             timerInterval2 = setInterval(function () {
-                timer2 += 10;
+                timer2 += additor;
+                if(noinput==0)
+                {
                 durationINms = timer2;
-            }, 10);
+                }
+            }, multiplikator);
         });
 
         button2.addEventListener("mouseup", function () {
@@ -189,9 +197,12 @@
 
         button3.addEventListener("mousedown", function () {
             timerInterval3 = setInterval(function () {
-                timer3 += 10;
+                timer3 += additor;
+                if(noinput==0)
+                {
                 durationOUTms = timer3;
-            }, 10);
+                }
+            }, multiplikator);
         });
 
         button3.addEventListener("mouseup", function () {
@@ -206,9 +217,12 @@
 
         button4.addEventListener("mousedown", function () {
             timerInterval4 = setInterval(function () {
-                timer4 += 10;
+                timer4 += additor;
+                if(noinput==0)
+                {
                 durationOUTms = timer4;
-            }, 10);
+                }
+            }, multiplikator);
         });
 
         button4.addEventListener("mouseup", function () {

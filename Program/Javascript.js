@@ -25,7 +25,6 @@ function myFunction() {
 }
 
 function main() {
-    console.log(gradWCorr);
     readPositionCorr();
     convertGradToSegmentYellow();
     sendDataToInterface(durationINms, durationOUTms, posW, posB, posWCorr, posBCorr);
@@ -107,4 +106,23 @@ function correctionW(a) {
         speed: 0,
         angle: a
     });
+}
+
+
+function resetCorr() {
+if (noinput==0)
+{
+correctionB(gradB)
+correctionW(gradW)
+}
+}
+
+function resetYellow() {
+if (noinput==0)
+{
+correctionB(gradBCorr-gradB);
+correctionW(gradWCorr-gradW);
+gradW=0;
+gradB=0;
+}
 }

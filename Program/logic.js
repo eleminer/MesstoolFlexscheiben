@@ -6,27 +6,21 @@
 //durationOUTms=0;
 
 //all in grad
-function resetCorr()
-{
 
-}
-function resetYellow()
-{
+//taster sperren
+var noinput=0;
 
-}
-function minusB()
+
+function mathM(number)
 {
-//durationOUTms
-}
-function plusB()
+console.log(number);
+if (number==1)
 {
-//durationOUTms
+    gradB=300;
 }
-function minusW()
+if (number==2)
 {
-//durationINms
+    gradB=100;
 }
-function plusW()
-{
-//durationINms
 }
+
