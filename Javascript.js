@@ -108,10 +108,3 @@ function correctionW(a) {
         angle: a
     });
 }
-
-function reset() {
-    correctionB(0);
-    correctionW(0);
-    gradW = 0;
-    gradB = 0;
-}

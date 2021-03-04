@@ -12,18 +12,21 @@
 
 
 <body>
-
+    <script src="logic.js"></script>
     <script src="propeller.js"></script>
     <script src="Javascript.js"></script>
     <script src="WBButtons.js"></script>
 
+
     <!--Buttons-->
     <div id="Bcounterclockwise">
-        <button id="BcounterclockwiseID" onclick="Bcounterclockwise()" class="fas fa-undo-alt htmlbuttons Bdelay"> B</button>
+        <button id="BcounterclockwiseID" onclick="Bcounterclockwise()" class="fas fa-undo-alt htmlbuttons Bdelay">
+            B</button>
     </div>
 
     <div id="reset">
-        <button onclick="reset()" class="fas fa-trash-alt htmlbuttons positionTOP"> Reset</button>
+        <button onclick="resetCorr()" class="fas fa-trash-alt htmlbuttons positionTOP"> R. corr </button>
+        <button onclick="resetYellow()" class="fas fa-trash-alt htmlbuttons positionTOP"> R. yellow </button>
     </div>
 
     <div id="Bclockwise">
@@ -31,7 +34,8 @@
     </div>
 
     <div id="Wcounterclockwise">
-        <button id="WcounterclockwiseID" onclick="Wcounterclockwise()" class="fas fa-undo-alt htmlbuttons Wdelay"> W</button>
+        <button id="WcounterclockwiseID" onclick="Wcounterclockwise()" class="fas fa-undo-alt htmlbuttons Wdelay">
+            W</button>
     </div>
 
     <div id="Wclockwise">
@@ -176,7 +180,7 @@
             timer2 = 0;
         });
 
-        
+
         //ButtonDelay B
         var timer3 = 0,
             timerInterval3,
