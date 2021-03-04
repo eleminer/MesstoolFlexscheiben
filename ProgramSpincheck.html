@@ -147,20 +147,20 @@
 
 
         //ButtonDelay W
-        var additor = 10;
-        var multiplikator = 10;
+        var samplerate = 10;
 
         var timer = 0,
             timerInterval,
             button = document.getElementById("WclockwiseID");
 
         button.addEventListener("mousedown", function () {
+            timestampBegin=(Date.now());
             timerInterval = setInterval(function () {
-                timer += additor;
+                timer =Date.now()-timestampBegin;
                 if (noinput == 0) {
                     durationINms = timer;
                 }
-            }, multiplikator);
+            }, samplerate);
         });
 
         button.addEventListener("mouseup", function () {
@@ -174,12 +174,13 @@
             button2 = document.getElementById("WcounterclockwiseID");
 
         button2.addEventListener("mousedown", function () {
+            timestampBegin2=(Date.now());
             timerInterval2 = setInterval(function () {
-                timer2 += additor;
+                timer2 =Date.now()-timestampBegin2;
                 if (noinput == 0) {
                     durationINms = timer2;
                 }
-            }, multiplikator);
+            }, samplerate);
         });
 
         button2.addEventListener("mouseup", function () {
@@ -194,12 +195,13 @@
             button3 = document.getElementById("BclockwiseID");
 
         button3.addEventListener("mousedown", function () {
+            timestampBegin3=(Date.now());
             timerInterval3 = setInterval(function () {
-                timer3 += additor;
+                timer3 =Date.now()-timestampBegin3;
                 if (noinput == 0) {
                     durationOUTms = timer3;
                 }
-            }, multiplikator);
+            }, samplerate);
         });
 
         button3.addEventListener("mouseup", function () {
@@ -213,12 +215,13 @@
             button4 = document.getElementById("BcounterclockwiseID");
 
         button4.addEventListener("mousedown", function () {
+            timestampBegin4=(Date.now());
             timerInterval4 = setInterval(function () {
-                timer4 += additor;
+                timer4 =Date.now()-timestampBegin4;
                 if (noinput == 0) {
                     durationOUTms = timer4;
                 }
-            }, multiplikator);
+            }, samplerate);
         });
 
         button4.addEventListener("mouseup", function () {
