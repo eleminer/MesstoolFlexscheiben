@@ -21,13 +21,15 @@
 
     <!--Buttons-->
     <div id="Bcounterclockwise">
-        <button id="BcounterclockwiseID" onclick="mathM(1)" class="fas fa-undo-alt htmlbuttons Bdelay">
-            B</button>
+        <button id="BcounterclockwiseID" onclick="mathM(1)" class="fas fa-undo-alt htmlbuttons Bdelay"> B</button>
     </div>
 
     <div id="reset">
         <button onclick="resetCorr()" class="fas fa-trash-alt htmlbuttons positionTOP"> R. corr </button>
         <button onclick="resetYellow()" class="fas fa-trash-alt htmlbuttons positionTOP"> R. yellow </button>
+    </div>
+    <div id="resetall">
+        <button onclick="resetall()" class="fas fa-trash-alt resetbutton"> R. all </button>
     </div>
 
     <div id="Bclockwise">
@@ -154,9 +156,9 @@
             button = document.getElementById("WclockwiseID");
 
         button.addEventListener("mousedown", function () {
-            timestampBegin=(Date.now());
+            timestampBegin = (Date.now());
             timerInterval = setInterval(function () {
-                timer =Date.now()-timestampBegin;
+                timer = Date.now() - timestampBegin;
                 if (noinput == 0) {
                     durationINms = timer;
                 }
@@ -174,9 +176,9 @@
             button2 = document.getElementById("WcounterclockwiseID");
 
         button2.addEventListener("mousedown", function () {
-            timestampBegin2=(Date.now());
+            timestampBegin2 = (Date.now());
             timerInterval2 = setInterval(function () {
-                timer2 =Date.now()-timestampBegin2;
+                timer2 = Date.now() - timestampBegin2;
                 if (noinput == 0) {
                     durationINms = timer2;
                 }
@@ -195,9 +197,9 @@
             button3 = document.getElementById("BclockwiseID");
 
         button3.addEventListener("mousedown", function () {
-            timestampBegin3=(Date.now());
+            timestampBegin3 = (Date.now());
             timerInterval3 = setInterval(function () {
-                timer3 =Date.now()-timestampBegin3;
+                timer3 = Date.now() - timestampBegin3;
                 if (noinput == 0) {
                     durationOUTms = timer3;
                 }
@@ -215,9 +217,9 @@
             button4 = document.getElementById("BcounterclockwiseID");
 
         button4.addEventListener("mousedown", function () {
-            timestampBegin4=(Date.now());
+            timestampBegin4 = (Date.now());
             timerInterval4 = setInterval(function () {
-                timer4 =Date.now()-timestampBegin4;
+                timer4 = Date.now() - timestampBegin4;
                 if (noinput == 0) {
                     durationOUTms = timer4;
                 }

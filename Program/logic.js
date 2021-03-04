@@ -25,12 +25,26 @@ var noinput=0;
 
 function mathM(number)
 {
+switch (number)
+{
+case 1: lastactionOUT=1;break;
+case 2: lastactionOUT=0;break;
+case 3: lastactionIN=1;break;
+case 4: lastactionIN=0;break;
+}
 if(durationINms!=0 && durationOUTms !=0)
 {
     noinput=1;
     //start
+    //Geschwindigkeit in Steps pro ms berechnen:
     var speedB=111/durationOUTms;
     var speedW=111/durationINms;
+    //außen: speedB*X
+    //innen: speedW*X
+    
+
+
+
 }
 }
 

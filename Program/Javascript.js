@@ -124,3 +124,7 @@ function resetYellow() {
         gradB = 0;
     }
 }
+
+function resetall() {
+    location.reload();
+}
