@@ -78,7 +78,6 @@ function convertGradToSegmentYellow() {
     }
     posB = Math.round((gradB % 360) / (360 / 111) + 1);
 
-    gradWCorr = (getRotationAngle(document.getElementById('correctionIN')));
     while (gradW < 360 * 2) {
         gradW = gradW + 360;
     }
