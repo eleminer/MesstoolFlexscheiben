@@ -14,10 +14,8 @@ var durationINms = 0;
 var durationOUTms = 0;
 //delays
 
-//lastaction
 var lastactionIN = 0;
 var lastactionOUT = 0;
-//0=mit dem Uhrzeigersinn 1=gegen den Uhrzeigersinn 
 myFunction();
 
 function myFunction() {
@@ -30,8 +28,6 @@ function main() {
     sendDataToInterface(durationINms, durationOUTms, posW, posB, posWCorr, posBCorr);
     sendDataToYellowPointIN(gradW);
     sendDataToYellowPointOUT(gradB);
-
-
 }
 
 function sendDataToInterface(durationIN, durationOUT, sektorIn, sektorOUT, sektorPredictIN, sektorPredictOUT) {
@@ -98,7 +94,6 @@ function correctionB(b) {
 function correctionW(a) {
     document.getElementById("correctionIN").style.transform = "translate(-50%,-50%) rotate(" + a + "deg)";
 }
-
 
 function resetCorr() {
     if (noinput == 0) {
