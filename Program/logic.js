@@ -24,7 +24,7 @@ var noinput = 0;
 var differentinput = 0;
 var counter;
 var corrTempDiffW = 0;
-var corrTempDiffB = 0;;
+var corrTempDiffB = 0;
 
 function timerM() {
     counter = setInterval(logicMath, 10);
@@ -53,7 +53,7 @@ function mathM(number) {
         }
         if (durationINms != 0 && durationOUTms != 0) {
             noinput = 1;
-            
+
             corrTempDiffB = gradBCorr;
             corrTempDiffW = gradWCorr;
             timerM();

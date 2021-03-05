@@ -5,11 +5,12 @@ function minusB() {
     } else {
         temp = gradBCorr + (360 / 111)
     }
-    new Propeller(document.getElementById('correctionOUT'), {
-        inertia: 0,
-        speed: 0,
-        angle: temp
-    });
+    document.getElementById("correctionOUT").style.transform = "translate(-50%,-50%) rotate(" + temp + "deg)";
+    //new Propeller(document.getElementById('correctionOUT'), {
+    //    inertia: 0,
+    //    speed: 0,
+    //    angle: temp
+    //});
 }
 
 function plusB() {
@@ -19,11 +20,12 @@ function plusB() {
     } else {
         temp = gradBCorr - (360 / 111)
     }
-    new Propeller(document.getElementById('correctionOUT'), {
-        inertia: 0,
-        speed: 0,
-        angle: temp
-    });
+    document.getElementById("correctionOUT").style.transform = "translate(-50%,-50%) rotate(" + temp + "deg)";
+    //new Propeller(document.getElementById('correctionOUT'), {
+    //    inertia: 0,
+    //    speed: 0,
+    //    angle: temp
+    //});
 }
 
 function minusW() {
@@ -33,11 +35,12 @@ function minusW() {
     } else {
         temp = gradWCorr + (360 / 111)
     }
-    new Propeller(document.getElementById('correctionIN'), {
-        inertia: 0,
-        speed: 0,
-        angle: temp
-    });
+    document.getElementById("correctionIN").style.transform = "translate(-50%,-50%) rotate(" + temp + "deg)";
+    //new Propeller(document.getElementById('correctionIN'), {
+    //    inertia: 0,
+    //    speed: 0,
+    //    angle: temp
+    //});
 }
 
 function plusW() {
@@ -47,9 +50,10 @@ function plusW() {
     } else {
         temp = gradWCorr - (360 / 111)
     }
-    new Propeller(document.getElementById('correctionIN'), {
-        inertia: 0,
-        speed: 0,
-        angle: temp
-    });
+    document.getElementById("correctionIN").style.transform = "translate(-50%,-50%) rotate(" + temp + "deg)";
+    // new Propeller(document.getElementById('correctionIN'), {
+    //    inertia: 0,
+    //    speed: 0,
+    //    angle: temp
+    //});
 }

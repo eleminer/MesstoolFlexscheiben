@@ -92,19 +92,11 @@ function convertGradToSegmentYellow() {
 }
 
 function correctionB(b) {
-    new Propeller(document.getElementById('correctionOUT'), {
-        inertia: 0,
-        speed: 0,
-        angle: b
-    });
+    document.getElementById("correctionOUT").style.transform = "translate(-50%,-50%) rotate(" + b + "deg)";
 }
 
 function correctionW(a) {
-    new Propeller(document.getElementById('correctionIN'), {
-        inertia: 0,
-        speed: 0,
-        angle: a
-    });
+    document.getElementById("correctionIN").style.transform = "translate(-50%,-50%) rotate(" + a + "deg)";
 }
 
 
@@ -121,6 +113,7 @@ function resetYellow() {
         correctionW(gradWCorr - gradW);
         gradW = 0;
         gradB = 0;
+
     }
 }
 
