@@ -66,21 +66,23 @@ function mathM(number) {
 
 function logicMath() {
 
+    //hier gibt es noch Probleme!!!!
+
     var speedB = 111 / durationOUTms; //wie viel grad pro ms
     var speedW = 111 / durationINms; //wie viel grad pro ms
 
 
 
     if (lastactionIN == 0) {
-        gradW = gradW + (speedW * (360 / 111) * 0.10);
+        gradW = gradW + (speedW * (360 / 111) * 0.50);
     } else {
-        gradW = gradW - (speedW * (360 / 111) * 0.10);
+        gradW = gradW - (speedW * (360 / 111) * 0.50);
     }
     correctionW(gradW + corrTempDiffW);
     if (lastactionOUT == 0) {
-        gradB = gradB + (speedB * (360 / 111) * 0.10);
+        gradB = gradB + (speedB * (360 / 111) * 0.50);
     } else {
-        gradB = gradB - (speedB * (360 / 111) * 0.10);
+        gradB = gradB - (speedB * (360 / 111) * 0.50);
     }
     correctionB(gradB + corrTempDiffB);
 
@@ -92,5 +94,4 @@ function logicMath() {
         differentinput = 0;
 
     }
-
 }
