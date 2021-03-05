@@ -22,8 +22,13 @@
 //0=mit dem Uhrzeigersinn 1=gegen den Uhrzeigersinn 
 var noinput = 0;
 var differentinput = 0;
+var counter;
+var corrTempDiffW = 0;
+var corrTempDiffB = 0;
 
-
+function timerM() {
+    counter = setInterval(logicMath, 10);
+}
 
 function mathM(number) {
     if (noinput == 0) {
@@ -54,23 +59,38 @@ function mathM(number) {
             corrTempDiffW = gradWCorr - gradW;
             gradW = 0;
             gradB = 0;
-            logicMath();
+            timerM();
         }
     }
 }
 
 function logicMath() {
+
+    var speedB = 111 / durationOUTms; //wie viel grad pro ms
+    var speedW = 111 / durationINms; //wie viel grad pro ms
+
+
+
     if (lastactionIN == 0) {
-        posW = 0;
+        gradW = gradW + (speedW * (360 / 111) * 0.10);
     } else {
-        posW = 360;
+        gradW = gradW - (speedW * (360 / 111) * 0.10);
     }
+    correctionW(gradW + corrTempDiffW);
     if (lastactionOUT == 0) {
-        posB = 0;
+        gradB = gradB + (speedB * (360 / 111) * 0.10);
     } else {
-        posB = 360;
+        gradB = gradB - (speedB * (360 / 111) * 0.10);
     }
-    
-    //corectionB(wert) correctionW(wert) gradW=wert gradB=wert
+    correctionB(gradB + corrTempDiffB);
+
+    if (Math.round((gradW % 360) / (360 / 111)) == Math.round((gradB % 360) / (360 / 111))) {
+        clearInterval(counter);
+        durationOUTms = 0;
+        durationINms = 0;
+        noinput = 0;
+        differentinput = 0;
+
+    }
 
 }
