@@ -206,7 +206,7 @@
             if (this.onRotate !== undefined && typeof this.onRotate === 'function') {
                 this.onRotate.bind(this)();
             }
-
+            
             this.lastAppliedAngle = this._angle;
 
         }
