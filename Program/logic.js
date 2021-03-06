@@ -72,9 +72,6 @@ function logicMath() {
             speedBumgerechnet = speedBumgerechnet * 1.0001;
         }
     }
-
-
-
     if (lastactionIN == 0) {
         gradW = gradW + (speedWumgerechnet * (360 / 111) * 10);
     } else {
