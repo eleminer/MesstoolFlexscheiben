@@ -91,8 +91,39 @@ function logicMath() {
     if (2 > Math.abs(((gradW % 360) / (360 / 111)) - ((gradB % 360) / (360 / 111)))) {
         console.log("ende erreicht!");
         correctionB(gradB + corrTempDiffB);
-        correctionW(gradW + corrTempDiffW)
+        correctionW(gradW + corrTempDiffW);
         clearInterval(counter);
+        var counterBcorr = 0;
+        var counterWcorr = 0;
+        while (0.25 < Math.abs(gradB - gradW)) {
+            console.log("in while");
+            if (gradB < gradW) {
+                gradB = gradB + 0.1;
+                corrTempDiffB = corrTempDiffB + 0.1;
+                counterBcorr = counterBcorr + 0.1;
+
+            }
+            if (gradB > gradW) {
+                gradW = gradW + 0.1;
+                corrTempDiffW = corrTempDiffW + 0.1;
+                counterWcorr = counterWcorr + 0.1;
+
+            }
+
+
+        }
+        if (lastactionOUT == 0) {
+            correctionB(gradB + corrTempDiffB - counterBcorr);
+        } else {
+            correctionB(gradB + corrTempDiffB + counterBcorr);
+        }
+        if (lastactionIN === 0) {
+            correctionW(gradW + corrTempDiffW - counterWcorr);
+        } else {
+            correctionW(gradW + corrTempDiffW + counterWcorr);
+        }
+
+
         durationOUTms = 0;
         durationINms = 0;
         noinput = 0;
