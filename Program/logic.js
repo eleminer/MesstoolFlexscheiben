@@ -68,8 +68,8 @@ function logicMath() {
     } else {
         //W hat eine höhere Geschwindigkeit
         while ((speedWumgerechnet * (360 / 111) * 10) < abstand / 3) {
-            speedWumgerechnet = speedWumgerechnet * 1.001;
-            speedBumgerechnet = speedBumgerechnet * 1.001;
+            speedWumgerechnet = speedWumgerechnet * 1.0001;
+            speedBumgerechnet = speedBumgerechnet * 1.0001;
         }
     }
 
@@ -88,7 +88,7 @@ function logicMath() {
     }
     correctionB(gradB + corrTempDiffB);
 
-    if (1.5 > Math.abs(((gradW % 360) / (360 / 111)) - ((gradB % 360) / (360 / 111)))) {
+    if (2 > Math.abs(((gradW % 360) / (360 / 111)) - ((gradB % 360) / (360 / 111)))) {
         console.log("ende erreicht!");
         correctionB(gradB + corrTempDiffB);
         correctionW(gradW + corrTempDiffW)
