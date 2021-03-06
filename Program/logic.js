@@ -4,6 +4,8 @@ var counter;
 var corrTempDiffW = 0;
 var corrTempDiffB = 0;
 var BorWSpeed = 0;
+var sektorNumberOUTGreenSave=0;
+var sektorNumberINGreenSave=0;
 
 function timerM() {
     counter = setInterval(logicMath, 10);
@@ -30,7 +32,7 @@ function mathM(number) {
         } else {
             differentinput = 0;
         }
-        if (durationINms != 0 && durationOUTms != 0) {
+        if (durationINms != 0 && durationOUTms != 0 && differentinput==1) {
             noinput = 1;
             correctionB(gradBCorr - gradB);
             correctionW(gradWCorr - gradW);
@@ -38,6 +40,8 @@ function mathM(number) {
             corrTempDiffW = gradWCorr - gradW;
             gradW = 0;
             gradB = 0;
+            sektorNumberINGreenSave=posWCorr;
+            sektorNumberOUTGreenSave=posBCorr;
             timerM();
         }
     }
