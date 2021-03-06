@@ -3,6 +3,7 @@ var differentinput = 0;
 var counter;
 var corrTempDiffW = 0;
 var corrTempDiffB = 0;
+var BorWSpeed = 0;
 
 function timerM() {
     counter = setInterval(logicMath, 10);
@@ -47,9 +48,31 @@ function logicMath() {
     var speedB = 111 / durationOUTms; //wie viel grad pro ms
     var speedW = 111 / durationINms; //wie viel grad pro ms
 
-//speed umrechnen
-speedBumgerechnet=speedB*0.001;
-speedWumgerechnet=speedW*0.001;
+    //speed umrechnen
+    speedBumgerechnet = speedB * 0.1;
+    speedWumgerechnet = speedW * 0.1;
+
+    var abstand = (Math.abs(Math.round(posB - posW)));
+    if (speedB >= speedW) {
+        BorWSpeed = 1;
+    } else {
+        BorWSpeed = 0;
+    }
+    console.log(abstand);
+    if (BorWSpeed == 1) {
+        //B hat eine höhere Geschwindigkeit
+        while ((speedBumgerechnet * (360 / 111) * 10) < abstand / 3) {
+            speedWumgerechnet = speedWumgerechnet * 1.0001;
+            speedBumgerechnet = speedBumgerechnet * 1.0001;
+        }
+    } else {
+        //W hat eine höhere Geschwindigkeit
+        while ((speedWumgerechnet * (360 / 111) * 10) < abstand / 3) {
+            speedWumgerechnet = speedWumgerechnet * 1.001;
+            speedBumgerechnet = speedBumgerechnet * 1.001;
+        }
+    }
+
 
 
     if (lastactionIN == 0) {
@@ -65,9 +88,10 @@ speedWumgerechnet=speedW*0.001;
     }
     correctionB(gradB + corrTempDiffB);
 
-    if (0.25>Math.abs(((gradW % 360) / (360 / 111))-((gradB % 360) / (360 / 111)))) {
-        correctionB(gradB+corrTempDiffB);
-        correctionW(gradW+corrTempDiffW)
+    if (1.5 > Math.abs(((gradW % 360) / (360 / 111)) - ((gradB % 360) / (360 / 111)))) {
+        console.log("ende erreicht!");
+        correctionB(gradB + corrTempDiffB);
+        correctionW(gradW + corrTempDiffW)
         clearInterval(counter);
         durationOUTms = 0;
         durationINms = 0;
