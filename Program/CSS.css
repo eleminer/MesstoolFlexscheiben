@@ -274,3 +274,25 @@ body {
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
     background: rgb(23, 46, 255);
 }
+
+#triangleOUT {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 300px;
+    height: 300px;
+    transform: translate(-50%, -50%) rotate(00deg);
+}
+
+#tOUT {
+    border-top: 9px solid transparent; /* skyblue */
+    border-right: 9px solid transparent; /* limegreen;  */
+    border-bottom: 9px solid transparent; /* orange; */
+    border-left: 9px solid red; 
+    position: absolute;
+    left: 50%;
+    top: -21%;
+    width: 4px;
+    height: 3px;
+    transform: translate(-50%, -50%)rotate(90deg);
+}
