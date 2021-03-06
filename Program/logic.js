@@ -1,25 +1,3 @@
-//correctionB(wert)
-//correctionW(wert)
-//gradW=0;
-//gradB=0;
-//durationINms=0;
-//durationOUTms=0;
-
-//all in grad
-
-//taster sperren
-
-//resetYellow()
-//resetCorr()
-
-//1 = bcounterclockwise
-//2 = bclockwise
-//3 = wcounterclockwise
-//4= wclockwise
-////lastaction
-//lastactionIN = 0;
-//lastactionOUT = 0;
-//0=mit dem Uhrzeigersinn 1=gegen den Uhrzeigersinn 
 var noinput = 0;
 var differentinput = 0;
 var counter;
@@ -66,23 +44,21 @@ function mathM(number) {
 
 function logicMath() {
 
-    //hier gibt es noch Probleme!!!!
-
     var speedB = 111 / durationOUTms; //wie viel grad pro ms
     var speedW = 111 / durationINms; //wie viel grad pro ms
 
 
 
     if (lastactionIN == 0) {
-        gradW = gradW + (speedW * (360 / 111) * 0.50);
+        gradW = gradW + (speedW * (360 / 111) * 10);
     } else {
-        gradW = gradW - (speedW * (360 / 111) * 0.50);
+        gradW = gradW - (speedW * (360 / 111) * 10);
     }
     correctionW(gradW + corrTempDiffW);
     if (lastactionOUT == 0) {
-        gradB = gradB + (speedB * (360 / 111) * 0.50);
+        gradB = gradB + (speedB * (360 / 111) * 10);
     } else {
-        gradB = gradB - (speedB * (360 / 111) * 0.50);
+        gradB = gradB - (speedB * (360 / 111) * 10);
     }
     correctionB(gradB + corrTempDiffB);
 

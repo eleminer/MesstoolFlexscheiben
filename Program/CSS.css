@@ -1,7 +1,7 @@
 body {
     padding: 0;
     margin: 0;
-    background: #000000;
+    background: #252424;
 }
 
 .htmlbuttons {
@@ -13,12 +13,24 @@ body {
     text-align: center;
     line-height: 1.1em;
     font-size: 1.1em;
+    border: 2px solid #413f5f;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.6em #413f5f, 0 0.9em rgba(0, 0, 0, 0.4);
+    position: relative;
+    top: 0;
+    transition: all 300ms ease-in-out;
+    border-radius: 0.5rem;
+    outline: 0 !important;
 }
+.htmlbuttons:active {
+    top: 0.4em;
+    box-shadow: 0 0.2em #4915c2, 0 0.5em rgba(0, 0, 0, 0.4);
+  }
 
 .htmlbuttons:hover {
     color: white;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    background: rgb(255, 55, 98);
+    background: rgb(23, 46, 255);
 }
 
 #Bcounterclockwise {
@@ -217,11 +229,11 @@ body {
 }
 
 .green {
-    color: rgb(0, 255, 21);
+    color: rgb(255, 255, 255);
 }
 
 .yellow {
-    color: rgb(255, 217, 0);
+    color: rgb(255, 255, 255);
 }
 
 #resetall {
@@ -231,8 +243,9 @@ body {
     margin-left: -30%;
     float: left;
 }
+
 .resetbutton {
-    background-color: #ff0505;
+    background-color: #c00707;
     border: none;
     color: white;
     width: 120px;
@@ -240,10 +253,22 @@ body {
     text-align: center;
     line-height: 1.1em;
     font-size: 1.1em;
+    border: 2px solid #413f5f;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.6em #413f5f, 0 0.9em rgba(0, 0, 0, 0.4);
+    position: relative;
+    top: 0;
+    transition: all 300ms ease-in-out;
+    border-radius: 0.5rem;
+    outline: 0 !important;
 }
+.resetbutton:active {
+    top: 0.4em;
+    box-shadow: 0 0.2em #4915c2, 0 0.5em rgba(0, 0, 0, 0.4);
+  }
 
 .resetbutton:hover {
-    color: rgb(7, 7, 7);
+    color: white;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    background: rgb(255, 251, 0);
+    background: rgb(23, 46, 255);
 }
