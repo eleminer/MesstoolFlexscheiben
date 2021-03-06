@@ -47,22 +47,27 @@ function logicMath() {
     var speedB = 111 / durationOUTms; //wie viel grad pro ms
     var speedW = 111 / durationINms; //wie viel grad pro ms
 
+//speed umrechnen
+speedBumgerechnet=speedB*0.001;
+speedWumgerechnet=speedW*0.001;
 
 
     if (lastactionIN == 0) {
-        gradW = gradW + (speedW * (360 / 111) * 10);
+        gradW = gradW + (speedWumgerechnet * (360 / 111) * 10);
     } else {
-        gradW = gradW - (speedW * (360 / 111) * 10);
+        gradW = gradW - (speedWumgerechnet * (360 / 111) * 10);
     }
     correctionW(gradW + corrTempDiffW);
     if (lastactionOUT == 0) {
-        gradB = gradB + (speedB * (360 / 111) * 10);
+        gradB = gradB + (speedBumgerechnet * (360 / 111) * 10);
     } else {
-        gradB = gradB - (speedB * (360 / 111) * 10);
+        gradB = gradB - (speedBumgerechnet * (360 / 111) * 10);
     }
     correctionB(gradB + corrTempDiffB);
 
-    if (Math.round((gradW % 360) / (360 / 111)) == Math.round((gradB % 360) / (360 / 111))) {
+    if (0.25>Math.abs(((gradW % 360) / (360 / 111))-((gradB % 360) / (360 / 111)))) {
+        correctionB(gradB+corrTempDiffB);
+        correctionW(gradW+corrTempDiffW)
         clearInterval(counter);
         durationOUTms = 0;
         durationINms = 0;
