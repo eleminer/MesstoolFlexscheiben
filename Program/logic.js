@@ -58,7 +58,6 @@ function logicMath() {
     } else {
         BorWSpeed = 0;
     }
-    console.log(abstand);
     if (BorWSpeed == 1) {
         //B hat eine höhere Geschwindigkeit
         while ((speedBumgerechnet * (360 / 111) * 10) < abstand / 3) {
