@@ -22,10 +22,11 @@ body {
     border-radius: 0.5rem;
     outline: 0 !important;
 }
+
 .htmlbuttons:active {
     top: 0.4em;
     box-shadow: 0 0.2em #4915c2, 0 0.5em rgba(0, 0, 0, 0.4);
-  }
+}
 
 .htmlbuttons:hover {
     color: white;
@@ -262,10 +263,11 @@ body {
     border-radius: 0.5rem;
     outline: 0 !important;
 }
+
 .resetbutton:active {
     top: 0.4em;
     box-shadow: 0 0.2em #4915c2, 0 0.5em rgba(0, 0, 0, 0.4);
-  }
+}
 
 .resetbutton:hover {
     color: white;
