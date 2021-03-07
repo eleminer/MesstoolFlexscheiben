@@ -89,14 +89,12 @@ function logicMath() {
     correctionB(gradB + corrTempDiffB);
 
     if (2 > Math.abs(((gradW % 360) / (360 / 111)) - ((gradB % 360) / (360 / 111)))) {
-        console.log("ende erreicht!");
         correctionB(gradB + corrTempDiffB);
         correctionW(gradW + corrTempDiffW);
         clearInterval(counter);
         var counterBcorr = 0;
         var counterWcorr = 0;
         while (0.25 < Math.abs(gradB - gradW)) {
-            console.log("in while");
             if (gradB < gradW) {
                 gradB = gradB + 0.1;
                 corrTempDiffB = corrTempDiffB + 0.1;
