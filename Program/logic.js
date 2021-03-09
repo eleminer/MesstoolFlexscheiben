@@ -8,7 +8,7 @@ var sektorNumberOUTGreenSave = 0;
 var sektorNumberINGreenSave = 0;
 
 function timerM() {
-    counter = setInterval(logicMath, 1000);
+    counter = setInterval(logicMath, 10);
 }
 
 function mathM(number) {
@@ -43,16 +43,39 @@ function mathM(number) {
             sektorNumberINGreenSave = posWCorr;
             sektorNumberOUTGreenSave = posBCorr;
             if (checkMath.checked) {
-                timerM();
+                timerMathOnly();
             } else {
                 timerM();
             }
         }
     }
 }
+function timerMathOnly() {
+    var X= 111/(111/durationINms+111/durationOUTms);
+    console.log(Math.round((111/durationINms)*X));
+    console.log(Math.round(-(111/durationINms)*X+111));
+    if (lastactionIN==0)
+    {
+    var PositionSegment=Math.round((111/durationINms)*X);
+    PositionSegment=PositionSegment+1;
+    }
+    else
+    {
+    var PositionSegment=Math.round(-(111/durationINms)*X+111);
+    PositionSegmen=PositionSegment+1;
+    }
+    
+    gradW=PositionSegment*(360/111);
+    gradB=PositionSegment*(360/111);
+    correctionB(gradB + corrTempDiffB);
+    correctionW(gradW + corrTempDiffW);
+    durationOUTms = 0;
+    durationINms = 0;
+    noinput = 0;
+    differentinput = 0;
+}
 
 function logicMath() {
-
     var speedB = 111 / durationOUTms; //wie viel grad pro ms
     var speedW = 111 / durationINms; //wie viel grad pro ms
 
