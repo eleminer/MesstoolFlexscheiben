@@ -18,8 +18,6 @@
     <script src="Program/Javascript.js"></script>
     <script src="Program/WBButtons.js"></script>
 
-
-    <!--Buttons-->
     <div id="Bcounterclockwise">
         <button id="BcounterclockwiseID" onclick="mathM(1)" class="fas fa-undo-alt htmlbuttons Bdelay"> B</button>
     </div>
@@ -61,16 +59,11 @@
         <button onclick="plusW()" class="fab fa-buffer htmlbuttons"> W +</button>
     </div>
 
-
-    <!--circles-->
     <div id="circleOut">
     </div>
     <div id="circleInner">
     </div>
-    <!--circles-->
 
-
-    <!--yellowPoints-->
     <div id="yellowOUT">
         <div id="yOUT">
         </div>
@@ -80,9 +73,7 @@
         <div id="yIN">
         </div>
     </div>
-    <!--yellowPoints-->
 
-    <!--correctionLine-->
     <div id="correctionOUT">
         <div id="cOUT">
         </div>
@@ -91,18 +82,14 @@
         <div id="cIN">
         </div>
     </div>
-    <!--correctionLine-->
 
-    <!--durationcounter-->
     <div id="durationInputFieldDIV">
         <h5 id="durationInputFieldText" class="durationcounter">Duration IN (ms):</h5>
         <h5 id="durationInputFieldIN" class="durationcounter"></h5>
         <h5 id="durationInputFieldText" class="durationcounter">Duration OUT (ms):</h5>
         <h5 id="durationInputFieldOUT" class="durationcounter"></h5>
     </div>
-    <!--durationcounter-->
 
-    <!--insertsPositions-->
     <div id="outpositionDIV">
         <h5 id="outposition" class=insertscounter>Sektor OUT:</h5>
         <h5 id="insertoutsektor" class="yellow"></h5>
@@ -113,20 +100,25 @@
         <h5 id="insertinsektor" class="yellow"></h5>
         <h5 id="insertinsektorpredict" class="green"></h5>
     </div>
-    <!--Markierung-->
     <div id="triangleOUT">
         <div id="tOUT">
         </div>
     </div>
-    <!--insertPositions-->
 
-    <!--Propellers-->
+    
+    <label class="switch">
+        <h5 id="textposition" class=insertscounter>Math or Approximation</h5>
+        <input type="checkbox">
+        <span class="slider round"></span>
+        
+    </label>
+
     <script>
-        var propOUT=new Propeller(document.getElementById('correctionOUT'), {
+        var propOUT = new Propeller(document.getElementById('correctionOUT'), {
             inertia: 0,
             speed: 0
         });
-        var propIN=new Propeller(document.getElementById('correctionIN'), {
+        var propIN = new Propeller(document.getElementById('correctionIN'), {
             inertia: 0,
             speed: 0,
         });
@@ -152,8 +144,6 @@
             return (angle < 0) ? angle += 360 : angle;
         }
 
-
-        //ButtonDelay W
         var samplerate = 10;
 
         var timer = 0,
@@ -179,7 +169,6 @@
             timer = 0;
         });
 
-        //ButtonDelay W
         var timer2 = 0,
             timerInterval2,
             button2 = document.getElementById("WcounterclockwiseID");
@@ -204,8 +193,6 @@
         });
 
 
-
-        //ButtonDelay B
         var timer3 = 0,
             timerInterval3,
             button3 = document.getElementById("BclockwiseID");
@@ -229,7 +216,6 @@
             timer3 = 0;
         });
 
-        //ButtonDelay B
         var timer4 = 0,
             timerInterval4,
             button4 = document.getElementById("BcounterclockwiseID");
