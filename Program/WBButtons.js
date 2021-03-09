@@ -7,11 +7,6 @@ function minusB() {
     }
     document.getElementById("correctionOUT").style.transform = "translate(-50%,-50%) rotate(" + temp + "deg)";
     propOUT.angle=temp;
-    //new Propeller(document.getElementById('correctionOUT'), {
-    //    inertia: 0,
-    //    speed: 0,
-    //    angle: temp
-    //});
 }
 
 function plusB() {
@@ -23,11 +18,6 @@ function plusB() {
     }
     document.getElementById("correctionOUT").style.transform = "translate(-50%,-50%) rotate(" + temp + "deg)";
     propOUT.angle=temp;
-    //new Propeller(document.getElementById('correctionOUT'), {
-    //    inertia: 0,
-    //    speed: 0,
-    //    angle: temp
-    //});
 }
 
 function minusW() {
@@ -39,11 +29,6 @@ function minusW() {
     }
     document.getElementById("correctionIN").style.transform = "translate(-50%,-50%) rotate(" + temp + "deg)";
     propIN.angle=temp;
-    //new Propeller(document.getElementById('correctionIN'), {
-    //    inertia: 0,
-    //    speed: 0,
-    //    angle: temp
-    //});
 }
 
 function plusW() {
@@ -55,9 +40,4 @@ function plusW() {
     }
     document.getElementById("correctionIN").style.transform = "translate(-50%,-50%) rotate(" + temp + "deg)";
     propIN.angle=temp;
-    // new Propeller(document.getElementById('correctionIN'), {
-    //    inertia: 0,
-    //    speed: 0,
-    //    angle: temp
-    //});
 }
