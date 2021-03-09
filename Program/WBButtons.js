@@ -5,7 +5,6 @@ function minusB() {
     } else {
         temp = gradBCorr + (360 / 111)
     }
-    document.getElementById("correctionOUT").style.transform = "translate(-50%,-50%) rotate(" + temp + "deg)";
     propOUT.angle=temp;
 }
 
@@ -16,7 +15,6 @@ function plusB() {
     } else {
         temp = gradBCorr - (360 / 111)
     }
-    document.getElementById("correctionOUT").style.transform = "translate(-50%,-50%) rotate(" + temp + "deg)";
     propOUT.angle=temp;
 }
 
@@ -27,7 +25,6 @@ function minusW() {
     } else {
         temp = gradWCorr + (360 / 111)
     }
-    document.getElementById("correctionIN").style.transform = "translate(-50%,-50%) rotate(" + temp + "deg)";
     propIN.angle=temp;
 }
 
@@ -38,6 +35,5 @@ function plusW() {
     } else {
         temp = gradWCorr - (360 / 111)
     }
-    document.getElementById("correctionIN").style.transform = "translate(-50%,-50%) rotate(" + temp + "deg)";
     propIN.angle=temp;
 }
