@@ -5,7 +5,7 @@
     <link rel="icon" type="image/png" href="Program/favicon.png">
     <title>Spincheck</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <link rel="stylesheet" href="Program/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="Program/CSS.css">
     <link rel="stylesheet" type="text/css" href="Program/all.css">
@@ -17,6 +17,61 @@
     <script src="Program/propeller.js"></script>
     <script src="Program/Javascript.js"></script>
     <script src="Program/WBButtons.js"></script>
+
+
+
+    <div id="circleOut">
+    </div>
+    <div id="circleInner">
+    </div>
+
+    <div id="yellowOUT">
+        <div id="yOUT">
+        </div>
+    </div>
+
+    <div id="yellowIN">
+        <div id="yIN">
+        </div>
+    </div>
+
+    <div id="correctionOUT">
+        <div id="cOUT">
+        </div>
+    </div>
+    <div id="correctionIN">
+        <div id="cIN">
+        </div>
+    </div>
+
+    <div id="durationInputFieldDIV">
+        <h5 id="durationInputFieldText" class="durationcounter">Duration IN (ms):</h5>
+        <h5 id="durationInputFieldIN" class="durationcounter"></h5>
+        <h5 id="durationInputFieldText" class="durationcounter">Duration OUT (ms):</h5>
+        <h5 id="durationInputFieldOUT" class="durationcounter"></h5>
+    </div>
+
+    <div id="outpositionDIV">
+        <h5 id="outposition" class=insertscounter>Sektor OUT:</h5>
+        <h5 id="insertoutsektor" class="yellow"></h5>
+        <h5 id="insertoutsektorpredict" class="green"></h5>
+        <h5 id="inposition" class=insertscounter>Sektor IN:</h5>
+        <h5 id="insertinsektor" class="yellow"></h5>
+        <h5 id="insertinsektorpredict" class="green"></h5>
+    </div>
+    <div id="triangleOUT">
+        <div id="tOUT">
+        </div>
+    </div>
+
+
+
+    <label class="switch">
+        <h5 id="textposition" class=insertscounter>Mathematics</h5>
+        <input id="checkMath" type="checkbox" onclick="mathANDApprox()">
+        <span class="slider round"></span>
+
+    </label>
 
     <div id="Bcounterclockwise">
         <button id="BcounterclockwiseID" onclick="mathM(1)" class="fas fa-undo-alt htmlbuttons Bdelay"> B</button>
@@ -59,60 +114,6 @@
         <button onclick="plusW()" class="fab fa-buffer htmlbuttons"> W +</button>
     </div>
 
-    <div id="circleOut">
-    </div>
-    <div id="circleInner">
-    </div>
-
-    <div id="yellowOUT">
-        <div id="yOUT">
-        </div>
-    </div>
-
-    <div id="yellowIN">
-        <div id="yIN">
-        </div>
-    </div>
-
-    <div id="correctionOUT">
-        <div id="cOUT">
-        </div>
-    </div>
-    <div id="correctionIN">
-        <div id="cIN">
-        </div>
-    </div>
-
-    <div id="durationInputFieldDIV">
-        <h5 id="durationInputFieldText" class="durationcounter">Duration IN (ms):</h5>
-        <h5 id="durationInputFieldIN" class="durationcounter"></h5>
-        <h5 id="durationInputFieldText" class="durationcounter">Duration OUT (ms):</h5>
-        <h5 id="durationInputFieldOUT" class="durationcounter"></h5>
-    </div>
-
-    <div id="outpositionDIV">
-        <h5 id="outposition" class=insertscounter>Sektor OUT:</h5>
-        <h5 id="insertoutsektor" class="yellow"></h5>
-        <h5 id="insertoutsektorpredict" class="green"></h5>
-    </div>
-    <div id="inpositionDIV">
-        <h5 id="inposition" class=insertscounter>Sektor IN:</h5>
-        <h5 id="insertinsektor" class="yellow"></h5>
-        <h5 id="insertinsektorpredict" class="green"></h5>
-    </div>
-    <div id="triangleOUT">
-        <div id="tOUT">
-        </div>
-    </div>
-
-
-    <label class="switch">
-        <h5 id="textposition" class=insertscounter>Mathematics</h5>
-        <input id="checkMath" type="checkbox" onclick="mathANDApprox()">
-        <span class="slider round"></span>
-
-    </label>
-
     <script>
         var localstorageAvailable = 0;
 
@@ -139,7 +140,7 @@
         }
         if (typeof (Storage) !== "undefined") {
             localstorageAvailable = 1;
-            if (localStorage.getItem('Buttonstate') !== null) {} else {
+            if (localStorage.getItem('Buttonstate') !== null) { } else {
                 if (checkMath.checked) {
                     localStorage.setItem('Buttonstate', 1);
                 } else {
