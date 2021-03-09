@@ -4,6 +4,7 @@ body {
     width: 100vw;
     height: 100vh;
     background: #252424;
+    overflow: scroll;
 }
 
 .htmlbuttons {
@@ -66,8 +67,8 @@ body {
 
 #reset {
     position: absolute;
-    top: 6%;
-    left: 50%;
+    top: 6vw;
+    left: 50vw;
     min-width: 100px;
     transform: translate(-50%, -50%);
 }
@@ -119,6 +120,18 @@ body {
     width: 300px;
     height: 300px;
     border-radius: 150px;
+    transform: translate(-50%, -50%);
+}
+
+#circleBack {
+    background-color:none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 600px;
+    height: 600px;
+    border-radius: 150px;
+    overflow: overlay;
     transform: translate(-50%, -50%);
 }
 
@@ -189,8 +202,8 @@ body {
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     transform: translate(-50%, -50%) rotate(00deg);
 }
 
@@ -198,7 +211,7 @@ body {
     background-color: rgb(0, 255, 21);
     position: absolute;
     left: 50%;
-    top: 15%;
+    top: 6%;
     width: 5px;
     height: 50px;
     border-radius: 15px;
@@ -306,8 +319,8 @@ body {
     left: 2vw;
     top: 1vh;
     display: inline-block;
-    width: 5.8vh;
-    height: 3vh;
+    width: 3vw;
+    height: 1.5vw;
 }
 
 .switch input {
@@ -331,10 +344,10 @@ body {
 .slider:before {
     position: absolute;
     content: "";
-    height: 2.5vh;
-    width: 2.5vh;
+    height: 1.3vw;
+    width: 1.3vw;
     left: 0vh;
-    bottom: 0.25vh;
+    bottom: 0.125vw;
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
@@ -349,9 +362,9 @@ input:focus+.slider {
 }
 
 input:checked+.slider:before {
-    -webkit-transform: translateX(26vh);
-    -ms-transform: translateX(26vh);
-    transform: translateX(3vh);
+    -webkit-transform: translateX(26vw);
+    -ms-transform: translateX(26vw);
+    transform: translateX(1.5vw);
 }
 
 .slider.round {
@@ -367,6 +380,6 @@ input:checked+.slider:before {
     padding-bottom: 20px;
     font-size: 1.5vw;
     position: relative;
-    top: -0.4vh;
-    left: 7vh;
+    top: 0.05vw;
+    left: 4vw;
 }
