@@ -112,15 +112,21 @@ function logicMath() {
         }
         if (lastactionOUT == 0) {
             correctionB(gradB + corrTempDiffB - counterBcorr);
+            propOUT.angle=(gradB + corrTempDiffB - counterBcorr);
         } else {
             correctionB(gradB + corrTempDiffB + counterBcorr);
+            propOUT.angle=(gradB + corrTempDiffB + counterBcorr);
         }
         if (lastactionIN === 0) {
             correctionW(gradW + corrTempDiffW - counterWcorr);
+            propIN.angle=(gradW + corrTempDiffW - counterWcorr);
+
         } else {
             correctionW(gradW + corrTempDiffW + counterWcorr);
+            propIN.angle=(gradW + corrTempDiffW + counterWcorr);
         }
 
+        
 
         durationOUTms = 0;
         durationINms = 0;
