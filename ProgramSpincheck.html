@@ -105,15 +105,55 @@
         </div>
     </div>
 
-    
+
     <label class="switch">
-        <h5 id="textposition" class=insertscounter>Math or Approximation</h5>
-        <input type="checkbox">
+        <h5 id="textposition" class=insertscounter>Mathematics</h5>
+        <input id="checkMath" type="checkbox" onclick="mathANDApprox()">
         <span class="slider round"></span>
-        
+
     </label>
 
     <script>
+        var localstorageAvailable = 0;
+
+
+        function mathANDApprox() {
+            if (checkMath.checked) {
+                console.log("checked");
+                if (localstorageAvailable == 1) {
+                    localStorage.setItem('Buttonstate', 1);
+                }
+            } else {
+                console.log("unchecked");
+                if (localstorageAvailable == 1) {
+                    localStorage.setItem('Buttonstate', 0);
+                }
+            }
+        }
+        //localStorage Buttton State
+        if (typeof (Storage) !== "undefined") {
+            localstorageAvailable = 1;
+            if (localStorage.getItem('Buttonstate') !== null) {
+            } else {
+                if (checkMath.checked) {
+                    localStorage.setItem('Buttonstate', 1);
+                } else {
+                    localStorage.setItem('Buttonstate', 0);
+                }
+
+            }
+            if (localStorage.getItem('Buttonstate')==1)
+            {
+            document.getElementById("checkMath").checked = true;
+            }
+            if (localStorage.getItem('Buttonstate')==0)
+            {
+            document.getElementById("checkMath").checked = false;
+            }
+        }
+
+
+
         var propOUT = new Propeller(document.getElementById('correctionOUT'), {
             inertia: 0,
             speed: 0
