@@ -119,22 +119,18 @@
 
         function mathANDApprox() {
             if (checkMath.checked) {
-                console.log("checked");
                 if (localstorageAvailable == 1) {
                     localStorage.setItem('Buttonstate', 1);
                 }
             } else {
-                console.log("unchecked");
                 if (localstorageAvailable == 1) {
                     localStorage.setItem('Buttonstate', 0);
                 }
             }
         }
-        //localStorage Buttton State
         if (typeof (Storage) !== "undefined") {
             localstorageAvailable = 1;
-            if (localStorage.getItem('Buttonstate') !== null) {
-            } else {
+            if (localStorage.getItem('Buttonstate') !== null) {} else {
                 if (checkMath.checked) {
                     localStorage.setItem('Buttonstate', 1);
                 } else {
@@ -142,13 +138,11 @@
                 }
 
             }
-            if (localStorage.getItem('Buttonstate')==1)
-            {
-            document.getElementById("checkMath").checked = true;
+            if (localStorage.getItem('Buttonstate') == 1) {
+                document.getElementById("checkMath").checked = true;
             }
-            if (localStorage.getItem('Buttonstate')==0)
-            {
-            document.getElementById("checkMath").checked = false;
+            if (localStorage.getItem('Buttonstate') == 0) {
+                document.getElementById("checkMath").checked = false;
             }
         }
 
