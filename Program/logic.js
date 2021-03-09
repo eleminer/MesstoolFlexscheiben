@@ -52,8 +52,6 @@ function mathM(number) {
 }
 function timerMathOnly() {
     var X= 111/(111/durationINms+111/durationOUTms);
-    console.log(Math.round((111/durationINms)*X));
-    console.log(Math.round(-(111/durationINms)*X+111));
     if (lastactionIN==0)
     {
     var PositionSegment=Math.round((111/durationINms)*X);
