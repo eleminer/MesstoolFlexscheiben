@@ -99,6 +99,8 @@ function resetCorr() {
     if (noinput == 0) {
         correctionB(gradB)
         correctionW(gradW)
+        propOUT.angle=(gradB);
+        propIN.angle=(gradW);
     }
 }
 
@@ -106,6 +108,8 @@ function resetYellow() {
     if (noinput == 0) {
         correctionB(gradBCorr - gradB);
         correctionW(gradWCorr - gradW);
+        propOUT.angle=(gradBCorr - gradB);
+        propIN.angle=(gradWCorr - gradW);
         gradW = 0;
         gradB = 0;
 
