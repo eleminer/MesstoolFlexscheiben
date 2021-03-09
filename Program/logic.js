@@ -67,8 +67,8 @@ function timerMathOnly() {
     
     gradW=PositionSegment*(360/111);
     gradB=PositionSegment*(360/111);
-    correctionB(gradB + corrTempDiffB);
-    correctionW(gradW + corrTempDiffW);
+    propOUT.angle=(gradB + corrTempDiffB);
+    propIN.angle=(gradW + corrTempDiffW);
     durationOUTms = 0;
     durationINms = 0;
     noinput = 0;
