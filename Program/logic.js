@@ -8,7 +8,7 @@ var sektorNumberOUTGreenSave = 0;
 var sektorNumberINGreenSave = 0;
 
 function timerM() {
-    counter = setInterval(logicMath, 10);
+    counter = setInterval(logicMath, 1000);
 }
 
 function mathM(number) {
@@ -42,7 +42,11 @@ function mathM(number) {
             gradB = 0;
             sektorNumberINGreenSave = posWCorr;
             sektorNumberOUTGreenSave = posBCorr;
-            timerM();
+            if (checkMath.checked) {
+                timerM();
+            } else {
+                timerM();
+            }
         }
     }
 }
@@ -111,18 +115,18 @@ function logicMath() {
 
         }
         if (lastactionOUT == 0) {
-            propOUT.angle=(gradB + corrTempDiffB - counterBcorr);
+            propOUT.angle = (gradB + corrTempDiffB - counterBcorr);
         } else {
-            propOUT.angle=(gradB + corrTempDiffB + counterBcorr);
+            propOUT.angle = (gradB + corrTempDiffB + counterBcorr);
         }
         if (lastactionIN === 0) {
-            propIN.angle=(gradW + corrTempDiffW - counterWcorr);
+            propIN.angle = (gradW + corrTempDiffW - counterWcorr);
 
         } else {
-            propIN.angle=(gradW + corrTempDiffW + counterWcorr);
+            propIN.angle = (gradW + corrTempDiffW + counterWcorr);
         }
 
-        
+
 
         durationOUTms = 0;
         durationINms = 0;

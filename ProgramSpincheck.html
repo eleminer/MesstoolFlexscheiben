@@ -118,6 +118,15 @@
 
 
         function mathANDApprox() {
+            if (noinput == 1 && localstorageAvailable == 1) {
+                if (localStorage.getItem('Buttonstate') == 1) {
+                    document.getElementById("checkMath").checked = true;
+                }
+                if (localStorage.getItem('Buttonstate') == 0) {
+                    document.getElementById("checkMath").checked = false;
+                }
+            }
+
             if (checkMath.checked) {
                 if (localstorageAvailable == 1) {
                     localStorage.setItem('Buttonstate', 1);
